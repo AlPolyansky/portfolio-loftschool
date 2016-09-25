@@ -30,7 +30,9 @@ $.gulp.task('default', $.gulp.series(
     'copy:image',
     'css:foundation',
     'sprite:svg',
-    'sprite:image'
+    'sprite:image',
+    'copy'
+
   ),
   $.gulp.parallel(
     'watch',

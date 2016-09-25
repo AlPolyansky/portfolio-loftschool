@@ -1,0 +1,16 @@
+.title{
+	text-align: center;
+	font-size: 63px;
+	max-width: 335px;
+	margin: 0 auto;
+	display: block;
+	@include fonts($fontExtra,$f-r);
+	&:after{
+		content: "";
+		display: block;
+		height: 3px;
+		width: 89px;
+		margin: 0 auto;
+		margin-top: 39px;
+	}
+}

@@ -1,0 +1,24 @@
+// Libs - it contains my library
+@import 'libs/orb/orb';
+
+// Core - it contains base settings
+@import 'core/var';
+@import 'core/fonts';
+@import 'core/classes';
+@import 'core/global';
+
+
+// blocks
+@import 'blocks/header';
+@import 'blocks/content';
+
+// Modules
+@import 'modules/social';
+@import 'modules/buttons';
+@import 'modules/avatar';
+@import 'modules/title';
+
+// Color Sheme - It allows you to control the colors of the project
+@import 'colorSheme/default';
+
+

@@ -1,0 +1,16 @@
+%link-reset{
+	&:active{
+			color: inherit;
+		}
+		&:link{
+			color: inherit;
+		}
+		&:visited{
+			color: inherit;
+		}
+}
+
+%li-reset{
+	list-style-type: none;
+	display: inline-block;
+}
