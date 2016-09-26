@@ -11,6 +11,7 @@
 // blocks
 @import 'blocks/header';
 @import 'blocks/content';
+@import 'blocks/footer';
 
 // Modules
 @import 'modules/social';
@@ -19,6 +20,8 @@
 @import 'modules/title';
 @import 'modules/cover';
 @import 'modules/form';
+@import 'modules/menu';
+@import 'modules/slider';
 
 // Color Sheme - It allows you to control the colors of the project
 @import 'colorSheme/default';

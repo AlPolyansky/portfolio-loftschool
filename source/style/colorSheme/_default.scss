@@ -11,10 +11,11 @@ body{
 // Social
 .social{
 	color: $colorBase;
-	&__item{
-		&:hover{
-			color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); //#4e8839
-		}
+}
+
+.header{
+	.social__item:hover{
+		color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); //#4e8839
 	}
 }
 
@@ -55,26 +56,85 @@ body{
 
 .s-about{
 	.cover{
-		background-color: lighten(desaturate(adjust-hue($colorDark, -141.8182), 3.0303), 63.3333); // #e0e0dc
-	}
-	.title{
-		&:after{
-			background-color: lighten(desaturate(adjust-hue($colorDark, -72.5874), 2.0639), 12.5490); // #566358
+		background-color: rgba(lighten(desaturate(adjust-hue($colorDark, -141.8182), 3.0303), 63.3333),.6); // #e0e0dc
+		.title{
+			color: rgba($colorDark,.6);
+			&:after{
+				background-color: rgba($colorDark,.6);
+			}
 		}
 	}
+
+}
+
+.form__item{
+	color: rgba($colorDark,.6);
+	&::-webkit-input-placeholder {color: rgba($colorDark,.5);}
+	&::-moz-placeholder          {color: rgba($colorDark,.5);}
+	&:-moz-placeholder           {color: rgba($colorDark,.5);}
+	&:-ms-input-placeholder      {color: rgba($colorDark,.5);}
 }
 
 
 .cover-button{
-	background-color: $colorMain;
+	background-color: rgba($colorMain,.85);
 	color: $colorBase;
 	&:hover{
-		background-color: darken($colorMain,10%);
+		background-color: rgba($colorMain,1);
 	}
 }
 
 .button__wrap{
-	border-left: 1px solid $colorBase;
-	border-right: 1px solid $colorBase;
+	border-left: 1px solid rgba($colorBase,.5);
+	border-right: 1px solid rgba($colorBase,.5);
 	
 }
+
+// Footer
+
+.footer__wrap{
+	background-color: rgba($colorDark, .85);
+}
+.footer__copyright{
+	background-color: rgba($colorMain,.85);
+}
+
+// Menu(nav)
+
+.footer{
+	.nav__link{
+		&:link{
+			color: $colorBase;
+			border-bottom: 1px solid transparent;
+		}
+		&:visited{
+			color: $colorBase;
+		}
+		&:hover{
+			color: $colorMain;
+			border-bottom: 1px solid $colorMain;
+		}
+   }
+   &__item{
+   	&:before{
+   		background-color: rgba($colorBase,.5);
+   	}
+   }
+}
+
+
+// Slider
+
+.slider__button{
+	color: rgba($colorMain,.7);
+}
+.dots__item{
+	border: 2px solid $colorMain;
+}
+
+.slider{
+	.active{
+		background-color: $colorMain;
+	}
+}
+

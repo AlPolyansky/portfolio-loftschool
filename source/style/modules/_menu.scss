@@ -1,0 +1,20 @@
+.nav{
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	&__item{
+		display: inline-block;
+		list-style-type: none;
+		padding-right: 35px;
+		&:last-child{
+			padding-right: none;
+		}
+	}
+	&__link{
+		padding: 0;
+		text-decoration: none;
+		margin: 0;
+		@include trans(.1s);
+	}
+}

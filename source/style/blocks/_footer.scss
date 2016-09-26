@@ -1,0 +1,80 @@
+.footer{
+	font-size: 0;
+	@include container(100%);
+	padding-left: 0;
+	padding-right: 0;
+	position: absolute;
+	bottom: 0;
+	&__wrap{
+		padding-top: 29px;
+		padding-bottom: 52px;
+	}
+	&__copyright{
+		text-align: center;
+		@include fonts($fontMain, $f-l);
+		font-size: 16px;
+		padding-top: 7px;
+		padding-bottom: 12px;
+	}
+	&__item{
+		font-size: 16px;
+		@include col(4);
+		vertical-align: top;
+		position: relative;
+		&:before{
+			position: absolute;
+			width: 1px;
+			height: 87px;
+		}
+		&:first-child{
+			&:before{
+				height: 0;
+				width: 0;
+			}
+		}
+	}
+	&__list{
+		@include clear();
+		max-width: 1800px;
+		margin: 0 auto;
+		//margin-bottom: 30px;
+	}
+	&__text{
+		max-width: 353px;
+		@include fonts($fontMain, $f-l);
+		top: -3px;
+		position: relative;
+		line-height: 23px;
+		margin-left: 30px;
+	}
+	.quote{
+		padding: 0;
+		margin: 0;
+		&__text{
+			margin: 0;
+			position: relative;
+			top: -3px;
+			max-width: 480px;
+			@include fonts($fontMain, $f-l-i);
+			margin-left: 30px;
+			line-height: 25px;
+		}
+		&__author{
+			margin-left: 30px;
+			@include fonts($fontMain, $f-b-i);
+		}
+	}
+	.nav{
+		margin-bottom: 18px;
+		margin-left: 31px;
+	}
+	.social{
+		margin-left: 29px;
+		&__link{
+			opacity: .5;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}

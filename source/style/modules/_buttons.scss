@@ -17,3 +17,14 @@
 	}
 }
 
+
+.icon-click{
+		margin: 0 auto;
+		text-align: center;
+		opacity: .7;
+		font-size: 30px;
+		margin-bottom: 247px;
+		&__ico{
+			cursor:pointer;
+		}
+	}
