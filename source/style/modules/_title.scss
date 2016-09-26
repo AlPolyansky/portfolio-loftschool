@@ -1,9 +1,12 @@
 .title{
 	text-align: center;
 	font-size: 63px;
-	max-width: 335px;
+	max-width: 435px;
 	margin: 0 auto;
+	text-transform: uppercase;
+	position: relative;
 	display: block;
+	z-index: 100;
 	@include fonts($fontExtra,$f-r);
 	&:after{
 		content: "";
@@ -11,6 +14,25 @@
 		height: 3px;
 		width: 89px;
 		margin: 0 auto;
-		margin-top: 39px;
+		margin-top: 18px;
+	}
+	
+}
+
+.title_context{
+	&:before{
+	 content: "";
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 116%;
+    height: 178%;
+    opacity: .1;
+    z-index: -1;
+    top: 25%;
+    left: 52%;
+    transform: translate(-50%, -50%);
 	}
 }

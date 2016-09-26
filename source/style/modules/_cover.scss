@@ -1,0 +1,40 @@
+.cover{
+	width: 380px;
+	margin: 0 auto;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+
+.cover-button__wrap{
+	display: table;
+	width: 100%;
+}
+
+.cover-button__text{
+	position: absolute;
+	font-size: 16px;
+	@include center();
+}
+
+.button__wrap{
+	display: table-cell;
+	&:last-child{
+		border-right: none;
+	}
+	&:first-child{
+		border-left: none;
+	}
+
+}
+
+.cover-button{
+	padding: 5px 0;
+	border:none;
+	width: 100%;
+	cursor:pointer;
+	outline: none;
+	position: relative;
+	height: 45px;
+	@include trans(.2s);
+}

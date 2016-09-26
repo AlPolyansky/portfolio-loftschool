@@ -1,14 +1,107 @@
-.page-content{
+.page-content,.container{
 	position: relative;
 }
 
-.container{
-	position: relative;
+.page-content{
+	@include line();
+	padding-bottom: 20px;
 }
 
 .decline__img{
 	position: absolute;
-	width: 100%;
-	height: 300px;
-	bottom: 0;
+    width: 100%;
+    height: 294px;
+    top: -197px;
+}
+
+// Works
+
+.works-page{
+	.s-works{
+		.title_context{
+			margin-top: 0px;
+			margin-bottom: 33px;
+			&:before{
+				background-image: url("../img/works.png");
+			}
+		}
+	}
+	.s-slider{
+		width: 100%;
+		height: 750px;
+		margin-bottom: 56px;
+	}
+	.s-about{
+		.title_context{
+			margin-bottom: 34px;
+			&:before{
+				background-image: url("../img/about.png");
+				top: 34%;
+			}
+		}
+		.recall{
+			max-width: 805px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 0;
+			margin-bottom: 38px;
+			.avatar{
+				height: 77px;
+				width: 77px;
+				margin: 0 auto;
+				margin-bottom: 18px;
+			}
+			&__item{
+				font-size: 16px;
+				padding: 0 12px;
+				width: 100%;
+				display: inline-block;
+				@include fonts($fontMain,$f-l-i);
+				max-width: 50%;
+				margin-bottom: 30px;
+			}
+			&__text{
+				text-align: left;
+				margin-top: 0;
+				line-height: 25px;
+				margin-bottom: 22px;
+				position: relative;
+				&:before{
+					display: block;
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 58px;
+					background-image: url("../img/quote.png");
+					background-repeat: no-repeat;
+					background-size: contain;
+					top: -26px;
+					left: 3px;
+					z-index: -1;
+					opacity: .1;
+				}
+			}
+			&__author{
+				text-align: center;
+				display: block;
+				font-size: 16px;
+			}
+			&__name{
+				display: block;
+				margin-bottom: 6px;
+				@include fonts($fontMain,$f-b-i);
+			}
+		}
+		.cover{
+			padding-top: 28px;
+			opacity: .6;
+			.title{
+				font-size: 35px;
+				margin-bottom: 30px;
+				&:after{
+					margin-top: 23px;
+				}
+			}
+		}
+	}
 }

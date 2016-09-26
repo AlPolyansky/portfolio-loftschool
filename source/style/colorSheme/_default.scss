@@ -5,6 +5,7 @@ $colorDark : #373e42;
 
 body{
 	color: $colorBase;
+	background-color: darken(saturate(adjust-hue($colorBase, 75.0000), 25.0000), 3.1373)//#f8f9f5;
 }
 
 // Social
@@ -30,4 +31,50 @@ body{
 	&:after{
 		background-color: $colorDark;
 	}
+}
+
+
+// Slider
+.s-slider{
+	background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412) // #ebefe2
+}
+
+// Recall
+
+.recall{
+	color: lighten(desaturate(adjust-hue($colorDark, -164.3182), 4.5965), 11.1765); // #5d5a55
+}
+.recall__author{
+	color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 0.0000); // #373e42
+}
+.recall__name{
+	color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839
+}
+
+// Avout form
+
+.s-about{
+	.cover{
+		background-color: lighten(desaturate(adjust-hue($colorDark, -141.8182), 3.0303), 63.3333); // #e0e0dc
+	}
+	.title{
+		&:after{
+			background-color: lighten(desaturate(adjust-hue($colorDark, -72.5874), 2.0639), 12.5490); // #566358
+		}
+	}
+}
+
+
+.cover-button{
+	background-color: $colorMain;
+	color: $colorBase;
+	&:hover{
+		background-color: darken($colorMain,10%);
+	}
+}
+
+.button__wrap{
+	border-left: 1px solid $colorBase;
+	border-right: 1px solid $colorBase;
+	
 }
