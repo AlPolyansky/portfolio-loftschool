@@ -1,0 +1,53 @@
+.article{
+	width: 100%;
+	position: relative;
+	@include col(9);
+	@include apply-to(1799px,max){
+		@include col(8);
+		@include pull(2);
+	}
+	margin-left: 207px;
+	//vertical-align: top;
+	//max-width: 980px;
+	//margin-left: 300px;
+	&__item{
+		padding-bottom: 65px;
+		margin-bottom: 77px;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			height: 5px;
+			position: absolute;
+			width: 100%;
+			max-width: 680px;
+			bottom: 0;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&__title{
+		font-size: 35px;
+		position: relative;
+		@include fonts($fontExtra,$f-r);
+		margin-left: 0;
+		padding: 0;
+		top: -7px;
+		margin: 0;
+		margin-bottom: 17px;
+	}
+	&__date{
+		font-size: 16px;
+	}
+	&__content{
+		line-height: 26px;
+		& > p{
+			max-width: 883px;
+		}
+	}
+}

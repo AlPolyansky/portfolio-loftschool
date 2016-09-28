@@ -12,6 +12,7 @@
 @import 'blocks/header';
 @import 'blocks/content-works';
 @import 'blocks/content-home';
+@import 'blocks/content-blog';
 @import 'blocks/footer';
 
 // Modules
@@ -23,6 +24,8 @@
 @import 'modules/form';
 @import 'modules/menu';
 @import 'modules/slider';
+@import 'modules/sidebar';
+@import 'modules/articles';
 
 // Color Sheme - It allows you to control the colors of the project
 @import 'colorSheme/default';

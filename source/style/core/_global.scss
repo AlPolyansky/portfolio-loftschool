@@ -22,34 +22,30 @@ label{
 	width: 100%;
 	min-height: 100%;
 	position: relative;
-	overflow: hidden;
-	/* background-repeat: no-repeat;
-	background-size: contain;
-	background-image: url("../img/body-bg.png");
-	background-position: center top; */
-	
+	overflow: hidden;	
 }
 
-.works-page{
-	&:after{
-		position: absolute;
-		display: block;
-		bottom: 0;
-		content: "";
-		width: 100%;
-		height: 1000px;
-		background-repeat: no-repeat;
-		background-size: cover;
-		//background-image: url("../img/body-bg-min.png");
-		background-position: center top;
-		display: none;
+
+.blog-page{
+	display: table;
+	height: 100%;
+
+	.page-content{
+		display: table-row;
+  		height: 100%;
 	}
-}
+}	
+
+
 
 
 .container{
 	@include container(auto,30px);
 	max-width: 1800px;
+	@include apply-to(1799px,max){
+		@include container(auto,20px);
+		max-width: 1200px;
+	}
 }
 
 .icon-click{

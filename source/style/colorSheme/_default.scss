@@ -184,3 +184,45 @@ body{
 		color: lighten(desaturate(adjust-hue($colorDark, -8.4848), 0.8340), 54.9020); // #c4cbcd
 	}
 }
+
+
+
+// Blog page
+
+.blog-page{
+	.header{
+		.title{
+			color: $colorBase;
+			&:after{
+				background-color: $colorBase;
+			}
+		}
+	}
+	
+}
+
+// Sidebar
+
+.sidebar{
+	&__link{
+		color: $colorDark;
+	}
+	&__item_active{
+		.sidebar__link{
+			color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839;
+		}
+		border-right: 3px solid darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839;
+	}
+}
+
+.article{
+	color: $colorDark;
+	&__date{
+		color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839;
+	}
+	&__item{
+		&:after{
+			background-color: lighten(saturate(adjust-hue($colorDark, -149.3182), 8.3004), 67.2549); // #ecebe4
+		}
+	}
+}

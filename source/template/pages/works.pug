@@ -3,52 +3,62 @@ extends ../_template
 block variables
   - var title = 'Works'
 
+
 block content
   .wrapper.works-page
-    include ../modules/_header
-    
+    header.header
+      .container
+        .header__top-line
+          include ../modules/_social
+          include ../modules/_sandwich
+        .header__content
+          +avatar("avatar-small.png","Моё фото","Моё фото")
+          h1.total-title Владимир Астахов
+          small.total-text Личный сайт веб разработчика
+          .icon-click
+            i.icon-click__ico.i-arrow-down
     .page-content
       img(src="assets/img/bg-1.png").decline__img
       section.s-works
         .container
-           h2.title.title_context Мои работы
+          h2.title.title_context Мои работы
       section.s-slider
         include ../modules/_slider
       section.s-about
         .container
-           h2.title.title_context Что обо мне говорят
-           .recall
-             .recall__item
-               .avatar
-                 img(src="assets/img/man-1.png", alt="Мое Фото", title="Мое фото").avatar__img
-               p.recall__text.
-                 Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-               small.recall__author
-                 span.recall__name Ковальчук Дмитрий
-                 | — основатель Loftschool
-             .recall__item
-               .avatar
-                 img(src="assets/img/man-2.png", alt="Мое Фото", title="Мое фото").avatar__img
-               p.recall__text.
-                 Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-               small.recall__author
-                 span.recall__name Зар Захаров
-                 | — преподаватель
-           .cover
-             .title Связаться со мной
-             form(method="POST",action="").form
-               .input-wrap
-                 input(type='text' name='name' placeholder='Имя').form__item
-                 input(name='email' type='text' placeholder="Email").form__item
-                 textarea(name='text' placeholder="Ваше сообщение").form__item.form__item_text
-               .cover-button__wrap
-                 .button__wrap
-                   button(type="submit").cover-button
+          h2.title.title_context Что обо мне говорят
+          .recall
+            .recall__item
+              .avatar
+                img(src="assets/img/man-1.png", alt="Мое Фото", title="Мое фото").avatar__img
+              p.recall__text.
+                Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              small.recall__author
+                span.recall__name Ковальчук Дмитрий
+                | — основатель Loftschool
+            .recall__item
+              .avatar
+                img(src="assets/img/man-2.png", alt="Мое Фото", title="Мое фото").avatar__img
+              p.recall__text.
+                Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+              small.recall__author
+                span.recall__name Зар Захаров
+              | — преподаватель
+          .cover
+            .title Связаться со мной
+            form(method="POST",action="").form
+              .input-wrap
+                input(type='text' name='name' placeholder='Имя').form__item
+                input(name='email' type='text' placeholder="Email").form__item
+                textarea(name='text' placeholder="Ваше сообщение").form__item.form__item_text
+              .cover-button__wrap
+                .button__wrap
+                  button(type="submit").cover-button
                     span.cover-button__text Отправить
-                 .button__wrap
-                   button(type="reset").cover-button
+                .button__wrap
+                  button(type="reset").cover-button
                     span.cover-button__text Очистить
-           .icon-click
-             i.icon-click__ico.i-arrow-up
+          .icon-click
+            i.icon-click__ico.i-arrow-up
     include ../modules/_footer
 

@@ -1,0 +1,36 @@
+.blog-page{
+		.container{
+			@include clear();
+		}
+
+		.page-content__container{
+			overflow: hidden;
+		}
+
+		.content-wrap{
+			max-width: 1200px;
+			width: 100%;
+			@include clear();
+			margin: 0 auto;
+			position: relative;
+		}
+	}
+
+.blog-page{
+	.sidebar{
+		&__list{
+		}
+
+	}
+	.footer{
+		position: static;
+	}
+}
+
+/* .page-content__container{
+	@include container(1200px);
+	width: 100%;
+	max-width: 1200px;
+	position: relative;
+	@include clear();
+} */
