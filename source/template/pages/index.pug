@@ -14,11 +14,11 @@ block content
 				include ../modules/_social
 				.cover-button__wrap
 					.button__wrap
-						a(href="works.html").cover-button Мои работы
+						a(href="works.html" title="Мои работы").cover-button Мои работы
 					.button__wrap
-						a(href="#").cover-button Обо мне
+						a(href="#" title="Обо мне").cover-button Обо мне
 					.button__wrap
-						a(href="#").cover-button Блог
+						a(href="#" title="Блог").cover-button Блог
 			.cover__content.cover__content__form
 				h2.title Авторизуйтесь
 				form(method="POST",action="").form
@@ -44,10 +44,8 @@ block content
 								label(for='form-radio-no').input-wrap__text Не уверен
 					.cover-button__wrap
 						.button__wrap
-							button(type="submit").cover-button
-								span.cover-button__text На главную
+							a(href="#").cover-button На главную 
 						.button__wrap
-							button(type="reset").cover-button
-								span.cover-button__text Войти
+							button(type="submit").cover-button Войти
 		.copyright.
 			© Владимир Астахов | создано с любовью в LoftSchool | 2016
