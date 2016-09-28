@@ -1,0 +1,29 @@
+//- avatar
+
+mixin avatar(file,alt,title,className)
+	-var defaultAlt = "Фото"
+	-var defaultTitle = "Фото"
+	-var defaultClassName = "avatar"
+	-if(alt === undefined)
+		- alt = defaultAlt
+	-if(title === undefined)
+		- title = defaultTitle
+	-if(className === undefined)
+		- className = defaultClassName
+	div(class=className)
+		img(src="assets/img/"+file, alt=alt, title=title, class=className + "__img")
+
+
+//- social
+
+mixin social()
+	ul.social
+		li.social__item
+			a(href="https://vk.com/id19473263" target="_blank" title="VK").social__link
+				i.social__icon.i-vkontakte
+		li.social__item
+			a(href="https://github.com/Eclerrr" target="_blank" title="GitHub").social__link
+				i.social__icon.i-github
+		li.social__item
+			a(href="#" target="_blank" title="LinkedIn").social__link
+				i.social__icon.i-linkedin

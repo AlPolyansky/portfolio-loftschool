@@ -1,7 +1,53 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+	- var title = 'Home'
 
 block content
-  
+	.wrapper.home-page
+		a(href="#").entry Авторизоваться
+		.cover
+			.cover__content.cover__content__info
+				+avatar("avatar-small.png","Моё фото","Моё фото")
+				h1.total-title Владимир Астахов
+				small.total-text Личный сайт веб разработчика
+				include ../modules/_social
+				.cover-button__wrap
+					.button__wrap
+						a(href="works.html").cover-button Мои работы
+					.button__wrap
+						a(href="#").cover-button Обо мне
+					.button__wrap
+						a(href="#").cover-button Блог
+			.cover__content.cover__content__form
+				h2.title Авторизуйтесь
+				form(method="POST",action="").form
+					.input__container
+						.input-wrap
+							input(type='text' name='name' placeholder='Логин' id="form-name").form__item
+							label(for='form-name').ico__wrap
+								i.i-user.input__ico
+						.input-wrap
+							input(name='email' type='text' placeholder="Пароль" id="form-pass").form__item
+							label(for='form-pass').ico__wrap
+								i.i-key.input__ico
+						.input-wrap.input-wrap_checkbox
+							input(name='checkbox' type='checkbox' id="form-checkbox").form__item.form__item_checkbox
+							label(for='form-checkbox').input-wrap__text Я человек
+						.input-wrap.input-wrap_radio
+							span.input-wrap__title Вы точно не робот?
+							.form__item__wrap
+								input(name='radio' type='radio' id="form-radio-yes").form__item.form__item_radio
+								label(for='form-radio-yes').input-wrap__text Да
+							.form__item__wrap
+								input(name='radio' type='radio' id="form-radio-no").form__item.form__item_radio
+								label(for='form-radio-no').input-wrap__text Не уверен
+					.cover-button__wrap
+						.button__wrap
+							button(type="submit").cover-button
+								span.cover-button__text На главную
+						.button__wrap
+							button(type="reset").cover-button
+								span.cover-button__text Войти
+		.copyright.
+			© Владимир Астахов | создано с любовью в LoftSchool | 2016

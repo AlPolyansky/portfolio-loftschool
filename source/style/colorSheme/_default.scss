@@ -18,6 +18,11 @@ body{
 		color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); //#4e8839
 	}
 }
+.home-page{
+	.social__item:hover{
+		color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); //#4e8839
+	}
+}
 
 //Sanwich button
 .sandwich{
@@ -67,6 +72,12 @@ body{
 
 }
 
+.home-page{
+	.cover{
+		background-color: rgba(darken(saturate(adjust-hue($colorMain, 58.3636), 8.8850), 37.2549),.6);
+	}
+}
+
 .form__item{
 	color: rgba($colorDark,.6);
 	&::-webkit-input-placeholder {color: rgba($colorDark,.5);}
@@ -76,11 +87,24 @@ body{
 }
 
 
+
 .cover-button{
 	background-color: rgba($colorMain,.85);
 	color: $colorBase;
 	&:hover{
 		background-color: rgba($colorMain,1);
+	}
+}
+
+.home-page{
+	.cover-button__wrap{
+		background-color: darken(desaturate(adjust-hue($colorMain, 3.1433), 1.0651), 3.3333); // #629055
+	}
+	.cover-button{
+		background-color: darken(desaturate(adjust-hue($colorMain, 3.1433), 1.0651), 3.3333); // #629055
+		&:hover{
+			background-color: darken(saturate(adjust-hue($colorMain, 1.9974), 11.5491), 11.9608); // #4a8039
+		}
 	}
 }
 
@@ -138,3 +162,25 @@ body{
 	}
 }
 
+// Home page
+
+.entry{
+	color: $colorBase;
+	border: 1px solid $colorBase;
+	&:hover{
+		border: 1px solid darken(saturate(adjust-hue($colorMain, -23.7867), 45.8483), 12.3529); // #729e19
+		background-color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839
+	}
+}
+
+.cover__content__form{
+	.title{
+		color: $colorBase;
+		&:after{
+			background-color: $colorBase;
+		}
+	}
+	.input__ico{
+		color: lighten(desaturate(adjust-hue($colorDark, -8.4848), 0.8340), 54.9020); // #c4cbcd
+	}
+}
