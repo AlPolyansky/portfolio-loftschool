@@ -226,3 +226,35 @@ body{
 		}
 	}
 }
+
+
+// About
+
+.about-page{
+	.s-about-me{
+		&:before{
+			background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412) // #ebefe2
+		}
+	}
+	.page-content{
+		color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
+	}
+	.about{
+		//background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412) // #ebefe2
+	}
+	.cover{
+		color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
+		background-color: rgba(darken(saturate(adjust-hue($colorBase, 72.0000), 20.0000), 4.9020),.85); //#f4f5f0
+		.title{
+			color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
+			&:after{
+				background-color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
+			}
+		}
+		.contacts{
+			&__icon{
+				color: $colorMain;
+			}
+		}
+	}
+}

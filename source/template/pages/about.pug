@@ -1,0 +1,84 @@
+extends ../_template
+
+block variables
+	- var title = 'About'
+
+block content
+	.wrapper.about-page
+		header.header
+			.container
+				.header__top-line
+					include ../modules/_social
+					include ../modules/_sandwich
+				.header__content
+					+avatar("avatar-small.png","Моё фото","Моё фото")
+					h1.total-title Владимир Астахов
+					small.total-text Личный сайт веб разработчика
+					.icon-click
+						i.icon-click__ico.i-arrow-down
+		.page-content
+			section.s-about-me
+				.about
+					.container-about-me
+						h2.title.title_context Обо мне
+						.about__content
+							.about__img__wrap
+								img.about__img(src="assets/img/avatar-medium.jpg" title="Моё фото" alt="Моё фото")
+							h3.title.about__title Кто я
+							p.about__text
+								|Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и 
+								|приложений. Мне нравится делать интересные и современные проекты.
+								br
+								br
+								|Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в 
+								|нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+				.skills
+					.container-about-me
+						h3.title Чем я могу быть вам полезен
+						p.skills__description Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+					.skills__list
+						ul.skills__row 
+							span.skills__list__title Frontend
+							li.skills__item
+								+skill("HTML5","60")
+							li.skills__item
+								+skill("CSS3","20")
+							li.skills__item
+								+skill("JavaScript & jQuery","20")
+						ul.skills__row 
+							span.skills__list__title Backend
+							li.skills__item
+								+skill("PHP","60")
+							li.skills__item
+								+skill("mySQL","20")
+							li.skills__item
+								+skill("Node.js & npm","20")
+							li.skills__item
+								+skill("Mongo.db","20")
+						ul.skills__row 
+							span.skills__list__title WorkFlow
+							li.skills__item
+								+skill("Git","60")
+							li.skills__item
+								+skill("Gulp","20")
+							li.skills__item
+								+skill("Bower","20")
+			.map
+				<iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.8602862975242!2d30.271429316332345!3d60.017390981904825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963446193d9711%3A0x6838a2994e12cbaf!2z0J_QsNGA0LDRiNGO0YLQvdCw0Y8g0YPQuy4sIDIy0Lox!5e0!3m2!1sru!2sru!4v1475187674048" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				.cover
+					.title Контакты
+					.contacts
+						ul.contacts__list
+							li.contacts__item 
+								i.i-skype.contacts__icon
+								| skype_kdn
+							li.contacts__item 
+								i.i-mail.contacts__icon
+								| astahov@gmail.com
+							li.contacts__item 
+								i.i-phone2.contacts__icon
+								| +7 931 200 93 24
+							li.contacts__item 
+								i.i-map_marker.contacts__icon
+								| Новосибирск, ул. Инская, д.14
+		include ../modules/_footer 

@@ -1,0 +1,60 @@
+@mixin circle($size) {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - #{$size/2});
+  top: calc(50% - #{$size/2});
+  width: $size;
+  height: $size;
+}
+
+$size: 118px;
+$innerSize: 78px;
+.skill {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+   &.gt-50 {
+    background-color: #81CE97;
+  }
+}
+.skill__circle {
+  @include circle($size);
+  clip: rect(0, $size, $size, #{$size/2});
+  .skill__circle__mask {
+    @include circle($size);
+    clip: rect(0, #{$size/2}, $size, 0);
+    background: #81CE97;
+    transform: rotate(0deg);
+    transition: transform 1s;
+  }
+.gt-50 & {
+    clip: rect(0, #{$size/2}, $size, 0);
+    .skill__circle__mask {
+      clip: rect(0, $size, $size, #{$size/2});
+      background: #E5E5E5;
+    }
+  }
+}
+
+
+
+// INNER
+.skill__inset{
+  background: #fff;
+  text-align: center;
+  height: $innerSize;
+  width: $innerSize;
+  position: absolute;
+  border-radius: 50%;
+  @include center();
+  .skill__inset__text {
+  	@include center();
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #81CE97;
+  }
+}

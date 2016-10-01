@@ -27,3 +27,11 @@ mixin social()
 		li.social__item
 			a(href="#" target="_blank" title="LinkedIn").social__link
 				i.social__icon.i-linkedin
+
+//- skill
+mixin skill(skillName,percent)
+	.skill(data-percent=percent)
+		.skill__circle
+			.skill__circle__mask
+		.skill__inset
+			span.skill__inset__text= skillName

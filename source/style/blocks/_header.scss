@@ -105,6 +105,19 @@
 	}
 }
 
+// About page
+
+.about-page{
+	.header{
+		&__top-line{
+			margin-bottom: 92px;
+		}
+		.avatar{
+			margin-bottom: 22px;
+		}
+	}
+}
+
 .header{
 	.social{
 		margin-left: 0px;
@@ -124,12 +137,13 @@
 }
 
 
-.works-page{
+.works-page,.about-page{
 	.header{
 		height: 656px;
 		background-image: url("../img/header-bg.jpg");
 	}
 }
+
 
 .blog-page{
 	.header{
@@ -138,3 +152,6 @@
 		background-position: center center;
 	}
 }
+
+
+

@@ -13,7 +13,9 @@
 @import 'blocks/content-works';
 @import 'blocks/content-home';
 @import 'blocks/content-blog';
+@import 'blocks/content_about';
 @import 'blocks/footer';
+
 
 // Modules
 @import 'modules/social';
@@ -26,6 +28,7 @@
 @import 'modules/slider';
 @import 'modules/sidebar';
 @import 'modules/articles';
+@import 'modules/skill';
 
 // Color Sheme - It allows you to control the colors of the project
 @import 'colorSheme/default';
