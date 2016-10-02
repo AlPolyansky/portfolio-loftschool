@@ -1,8 +1,10 @@
+$coverWidth : 380px;
+
 .cover{
-	width: 380px;
+	width: $coverWidth;
 	margin: 0 auto;
 	border-radius: 5px;
-	overflow: hidden;
+	//overflow: hidden;
 }
 
 
@@ -37,4 +39,8 @@
 	position: relative;
 	height: 45px;
 	@include trans(.2s);
+}
+
+.cover__content__info{
+	
 }
