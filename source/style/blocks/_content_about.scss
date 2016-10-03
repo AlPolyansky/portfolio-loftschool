@@ -62,9 +62,14 @@
 		}
 		&__img__wrap{
 			margin-bottom: 27px;
+			max-height: 391px;
+			min-height: 391px;
+			overflow: hidden;
+			position: relative;
 		}
 		&__img{
 			width: 100%;
+			@include center();
 		}
 		&__title{
 			font-size: 35px;
