@@ -8,7 +8,7 @@
 		width: 50%;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -2px;
 	}
 }
 
@@ -19,6 +19,9 @@
 }
 
 .about-page{
+	.wrap{
+		position: relative;
+	}
 	.header{
 		&:after{
 			background-image: url("../img/bg-2.png");
@@ -130,10 +133,12 @@
 		}
 	}
 	.cover{
-		margin-top: 328px;
+		margin-top: 327px;
 		position: relative;
 		left: 10px;
+		overflow: hidden;
 		padding-bottom: 15px;
+		z-index: 1000;
 		.title{
 			margin-top: 26px;
 			font-size: 35px;
@@ -145,12 +150,17 @@
 	}
 
 
-	.map{
+	.s-map{
 		overflow: hidden;
 		position: relative;
 		width: 100%;
-		min-height: 1110px;
-
+		height: 1111px;
+		position: relative;
+	}
+	.map{
+		width: 100%;
+		min-height: 100%;
+		position: absolute;
 	}
 
 	.google-map{

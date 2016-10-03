@@ -5,19 +5,46 @@ $animateView : 800px;
 	background-image: url("../img/header-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	-webkit-box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
+		-moz-box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
+		box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
 	height: 100%;
 	min-height: 900px;
+	@include apply-to($xs,max){
+		height: 100%;
+		min-height: 780px;
+	}
+	text-align: center;
 	.cover{
 		text-align: center;
 		@include center();
 		perspective: $animateView;
 		top: 45%;
+		@include trans(.2s);
+		@include apply-to($s,max){
+			width: 348px;
+		}
+		@include apply-to($xs,max){
+			width: 300px;
+			position: static;
+			//@include center();
+			top: 55%;
+			transform: none;
+			margin-bottom: 40px;
+		}
 		.cover-button{
 			display: block;
 			height: auto;
 			text-decoration: none;
 			padding: 15px 30px;
 			width: 100%;
+			@include apply-to($s,max){
+				padding: 15px 24px;
+			}
+			@include apply-to($xs,max){
+				padding: 15px 0px;
+				font-size: 14px;
+			}
 		}
 	}
 	.cover__content__info{
@@ -28,6 +55,9 @@ $animateView : 800px;
 			margin: 0 auto;
 			margin-top: 40px;
 			margin-bottom: 14px;
+			@include apply-to($xs,max){
+				margin-bottom: 23px;
+			}
 		}
 		.social{
 			margin-bottom: 38px;
@@ -37,12 +67,19 @@ $animateView : 800px;
 			display: block;
 			margin: 0;
 			margin-bottom: 8px;
+			@include apply-to($xs,max){
+				font-size: 21px;
+			}
 		}
 		.total-text{
 			font-size: 16px;
 			display: block;
 			margin: 0;
 			margin-bottom: 27px;
+			@include apply-to($xs,max){
+				font-size: 14px;
+				margin-bottom: 30px;
+			}
 		}
 	}
 	.cover__content__form{
@@ -50,6 +87,7 @@ $animateView : 800px;
 		-webkit-user-select: none;
 		.button__wrap{
 			width: 50%;
+			float: left;
 		}
 		.input__container{
 			padding-left: 20px;
@@ -201,6 +239,15 @@ $animateView : 800px;
 		right: 0;
 		left: 0;
 		bottom: 41px;
+		@include apply-to($xs,max){
+			position: relative;
+			top: 20px;
+			font-size: 14px;
+
+		}
+	}
+	.hide{
+		margin-bottom: 0;
 	}
 
 }
@@ -208,12 +255,23 @@ $animateView : 800px;
 .entry{
 	position: absolute;
 	right: 19px;
+	text-align: center;
 	top: 20px;
 	padding: 13px 27px;
-	display: block;
+	display: inline-block;
 	border-radius: 30px;
 	text-decoration: none;
 	background-color: transparent;
 	@include trans(.2s);
 	@include fonts($fontMain,$f-m);
+	@include apply-to($xs,max){
+		font-size: 14px;
+		display: inline-block;
+		padding: 11px 19px;
+		text-align: center;
+		position: static;
+		margin-top: 10px;
+		margin-bottom: 35px;
+	}
 }
+

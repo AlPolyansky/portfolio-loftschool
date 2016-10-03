@@ -32,7 +32,7 @@
 }
 
 .cover__front {
-	position: absolute;
+	//position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -41,7 +41,7 @@
 	z-index: 900;
 	text-align: center;
 	transform: rotateX(0deg) rotateY(0deg);
-	transform-style: preserve-3d;
+	//transform-style: preserve-3d;
 	backface-visibility: hidden;
 	transition: all .4s ease-in-out;
 }
@@ -49,12 +49,11 @@
 .cover__back{
 	height: inherit;
 	overflow: hidden;
-	//position: absolute;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	transform: rotateY(-180deg);
-	transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
 	transition: all .4s ease-in-out;
@@ -62,4 +61,5 @@
 
 .hide{
 	opacity: 0;
+	visibility: hidden;
 }

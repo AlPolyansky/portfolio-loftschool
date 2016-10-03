@@ -15,7 +15,23 @@
 			    background-size: 100% 100%;
 			    bottom: -109px;
 			    background-repeat: no-repeat;
+			    display: none;
 				}
+	&__triangle{
+		position: absolute;
+		bottom: -1px;
+		height: 300px;
+		width: 100%;
+		margin: 0 auto;
+		viewbox: "0 0 100 220";
+		svg{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 210px;
+		}
+			
+	}
 	&__top-line{
 		@include clear();
 		margin-top: 24px;

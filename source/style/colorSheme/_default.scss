@@ -1,12 +1,48 @@
 $colorMain : #6c9c5a;
 $colorBase : #ffffff;
 $colorDark : #373e42;
+$colorBackground : #f8f9f5;
 
 
 body{
 	color: $colorBase;
-	background-color: darken(saturate(adjust-hue($colorBase, 75.0000), 25.0000), 3.1373)//#f8f9f5;
+	background-color: $colorBackground;
 }
+
+//Header
+.works-page,.blog-page{
+	.header{
+		&__triangle{
+			svg{
+				.left-triangle{
+					fill: $colorBackground ;
+				}
+				.right-triangle{
+					fill: $colorBackground ;
+				}
+				
+			}
+				
+		}
+	}
+}
+.about-page{
+	.header{
+		&__triangle{
+			svg{
+				.left-triangle{
+					fill: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412); // #ebefe2
+				}
+				.right-triangle{
+					fill: $colorBackground ;
+				}
+				
+			}
+				
+		}
+	}
+}
+
 
 // Social
 .social{
