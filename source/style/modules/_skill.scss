@@ -1,48 +1,33 @@
-@mixin circle($size) {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - #{$size/2});
-  top: calc(50% - #{$size/2});
-  width: $size;
-  height: $size;
-}
-
 $size: 118px;
 $innerSize: 78px;
+$activeColor: #81CE97;
+$percent: 0;
+$bgColor: lighten($activeColor, 24%);
+
 .skill {
   width: $size;
   height: $size;
   border-radius: 50%;
   background-color: #E5E5E5;
   position: relative;
-   &.gt-50 {
-    background-color: #81CE97;
+  &__wrap{
+    transform: rotate(-90deg);
+    border-radius: 50%;
+  }
+  &__circle{
+    stroke: $activeColor;
+    fill: $bgColor;
+    @include trans(.5s);
+    stroke-width: 32;
+    stroke-dasharray: $percent 100;
   }
 }
-.skill__circle {
-  @include circle($size);
-  clip: rect(0, $size, $size, #{$size/2});
-  .skill__circle__mask {
-    @include circle($size);
-    clip: rect(0, #{$size/2}, $size, 0);
-    background: #81CE97;
-    transform: rotate(0deg);
-    transition: transform 1s;
-  }
-.gt-50 & {
-    clip: rect(0, #{$size/2}, $size, 0);
-    .skill__circle__mask {
-      clip: rect(0, $size, $size, #{$size/2});
-      background: #E5E5E5;
-    }
-  }
-}
+
 
 
 
 // INNER
-.skill__inset{
+.skill__inner{
   background: #fff;
   text-align: center;
   height: $innerSize;
@@ -50,11 +35,10 @@ $innerSize: 78px;
   position: absolute;
   border-radius: 50%;
   @include center();
-  .skill__inset__text {
+  .skill__text {
   	@include center();
     display: block;
     font-size: 14px;
     font-weight: bold;
-    color: #81CE97;
   }
 }

@@ -312,3 +312,18 @@ body{
 		}
 	}
 }
+
+// Skills
+
+.skill{
+	&__circle{
+		fill: lighten(desaturate(adjust-hue($colorMain, -61.6364), 13.3158), 37.2549); //#dfdcd5
+		stroke: lighten(desaturate(adjust-hue($colorMain, -4.5666), 4.0779), 14.7059); //#9ab68b
+	}
+	&__inner{
+		background-color: $colorBackground
+	}
+	&__text{
+		color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); //#4e8839
+	}
+}

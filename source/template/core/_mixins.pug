@@ -31,7 +31,7 @@ mixin social()
 //- skill
 mixin skill(skillName,percent)
 	.skill(data-percent=percent)
-		.skill__circle
-			.skill__circle__mask
-		.skill__inset
-			span.skill__inset__text= skillName
+		svg.skill__wrap(viewbox='0 0 32 32')
+			circle.skill__circle(r='16', cx='16', cy='16')
+		.skill__inner
+			span.skill__text= skillName

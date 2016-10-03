@@ -14,30 +14,34 @@ $( document ).ready(function() {
 		$(".home-page .cover").removeClass("flip");
 	})
 
+// skill
+
+function skillPercent(){
+    var $skill = $(".skill");
+    $skill.each(function(){
+        var $this = $(this);
+        var percent = $this.data("percent");
+        var circle = $this.find(".skill__circle");
+        circle.css({"stroke-dasharray": percent + " 100"});
+    })
+}
+setTimeout(function(){
+    skillPercent();
+},2000)
 
 
-var $skill = $('.skill');
-  $skill.on("mouseenter",function(){
-  	
-   var percent = parseInt($skill.data('percent'));
-   var deg = 360*percent/100;
-	  if (percent > 50) {
-	  	setTimeout(function(){
-	  		$skill.addClass('gt-50');
-	  	},520);
-	    
-	  }
-  	$('.skill__circle__mask').css('transform','rotate('+ deg +'deg)');
-  })
+
+
+
+
+
+
+
+
+
+})
 
 // google map
-
-
-
-
-
-
-});
 
 function initMap() {
         // Create a map object and specify the DOM element for display.
@@ -46,7 +50,8 @@ function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
         center: position,
         scrollwheel: false,
-        zoom: 14
+        zoom: 14,
+        disableDefaultUI: true
         });
         var image = {
 			  url: "./assets/img/map-marker.png",
