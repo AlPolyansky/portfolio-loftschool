@@ -22,11 +22,6 @@
 	.wrap{
 		position: relative;
 	}
-	.header{
-		&:after{
-			background-image: url("../img/bg-2.png");
-		}
-	}
 	.about{
 		min-height: 800px;
 		width: 100%;

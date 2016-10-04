@@ -1,3 +1,77 @@
+'use strict'
+var startModule = (function(){
+    // Переменные
+
+    var $content = $(".page-content");
+    var $downClick = $(".down-click__ico");
+    var $wrapper = $(".wrapper");
+    var $menu = $(".nav");
+    var $sandwich = $(".sandwich");
+    var scrollSpeed = 700;
+
+
+
+    // Служеные функции
+
+    var log = function(elem){
+        return console.log(elem);
+    }
+
+    var getPositionTop = function(elem){
+        return $(elem).offset().top;
+    }
+
+    var getPositionLeft = function(elem){
+        return $(elem).offset().left;
+    }
+
+    var scrollTo = function(elem,speed){
+        return $('body,html').animate({scrollTop: getPositionTop(elem)}, speed);
+    }
+    
+    var cloneInsert = function(parent,element){
+        return element.clone(true).prependTo(parent);
+    }
+
+    // Функции модуля
+
+
+    var _addPopUpMenu = function(){
+        cloneInsert($("body"),$menu).wrapAll('<div class="popUpMenu"></div>').addClass("popUpMenu__inner");
+        var $popUpMenu = $(".popUpMenu");
+    }
+
+
+    // Прослушка
+
+    var _setUpListner = function(){
+        $downClick.on("click",function(){scrollTo($content,scrollSpeed)});
+        $sandwich.on("click",function(){
+            $(this).toggleClass("sandwich_on");
+            $("body").toggleClass("no-scroll");
+            $(".popUpMenu").toggleClass("popUpMenu_show");
+        })
+    }
+
+
+    
+
+    return {
+        init: function(){
+            // происходит сразу
+            _addPopUpMenu();
+            _setUpListner();
+            
+        }
+    };
+
+})();
+
+$( document ).ready(function() {
+    startModule.init();
+})
+
+
 $( document ).ready(function() {
     
 	// TEST

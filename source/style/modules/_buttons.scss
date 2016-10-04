@@ -3,28 +3,63 @@
 	width: 41px;
 	cursor: pointer;
 	margin-top: 3px;
-	position: relative;
-	z-index: 1000;
+	z-index: 3000;
+	position: absolute;
+	right: 30px;
+	top: 28px;
+	@include apply-to($xs,max){
+		width: 25px;
+		height: 25px;
+	}
 	&__line{
+		@include trans(.3s);
 		width: 100%;
 		display: block;
 		height: 5px;
 		margin-bottom: 10px;
 		border-radius: 5px;
+		@include apply-to($xs,max){
+			margin-bottom: 5px;
+		}
 		&:last-child{
 			margin-bottom: 0;
+		}
+	}
+	&__line__middle{
+		opacity: 1;
+	}
+}
+
+.sandwich_on{
+	
+	.sandwich__line__top{
+		transform: rotate(45deg) translate(10px, 12px);
+		margin-bottom: 0;
+		@include apply-to($xs,max){
+			transform: rotate(45deg) translate(7px, 7px);
+		}
+	}
+	.sandwich__line__middle{
+		opacity: 0;
+	}
+	.sandwich__line__bottom{
+		transform: rotate(-45deg) translate(2px, -4px);
+		@include apply-to($xs,max){
+			transform: rotate(-45deg) translate(4px, -4px);
 		}
 	}
 }
 
 
-.icon-click{
-		margin: 0 auto;
-		text-align: center;
-		opacity: .7;
-		font-size: 30px;
-		margin-bottom: 247px;
-		&__ico{
-			cursor:pointer;
-		}
+.down-click{
+	text-align: center;
+	opacity: .7;
+	font-size: 30px;
+	position: absolute;
+	width: 100%;
+	bottom: 120px;
+	z-index: 100;
+	&__ico{
+		cursor:pointer;
 	}
+}

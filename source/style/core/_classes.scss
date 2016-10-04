@@ -59,7 +59,100 @@
 	transition: all .4s ease-in-out;
 }
 
+
+.popUpMenu{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	color: #fff;
+	z-index: 2000;
+	opacity: 0;
+	visibility: hidden;
+	@include trans(.5s);
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 0;
+		top: 0;
+		@include trans(.5s);
+	}
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 0;
+		top: 0;
+		right: 0;
+		@include trans(.5s);
+	}
+	&__inner{
+		position: absolute;
+		z-index: 2001;
+		@include center();
+		.nav__item{
+			display: block;
+			text-align: center;
+			font-size: 63px;
+			@include fonts($fontExtra,$f-r);
+			margin-bottom: 60px;
+			position: relative;
+			padding-right: 0;
+			@include apply-to($s,max){
+				font-size: 49px;
+			}
+			@include apply-to($xs,max){
+				font-size: 35px;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+			
+		.nav__link{
+			display: block;
+			&:after{
+				content: "";
+				display: block;
+				height: 3px;
+				margin: 0 auto;
+				margin-top: 30px;
+				width: 89px;
+				opacity: 0;
+				@include trans(.1s);
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+		}
+	}
+}
+
+.popUpMenu_show{
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	&:after,&:before{
+		width: 50%;
+	}
+}
+
 .hide{
 	opacity: 0;
 	visibility: hidden;
+}
+
+.total-hide{
+	display: none;
+}
+
+.no-scroll{
+	overflow: hidden;
 }

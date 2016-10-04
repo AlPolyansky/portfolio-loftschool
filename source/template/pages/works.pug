@@ -5,22 +5,22 @@ block variables
 
 
 block content
+  .container
+      include ../modules/_sandwich
   .wrapper.works-page
-    header.header
-      .container
+    header.header.header_center-svg
+      .container.header__container
         .header__top-line
           include ../modules/_social
-          include ../modules/_sandwich
         .header__content
           +avatar("avatar-small.png","Моё фото","Моё фото")
           h1.total-title Александр Полянский
           small.total-text Личный сайт веб разработчика
-          .icon-click
-            i.icon-click__ico.i-arrow-down
-      .header__triangle
-        include ../core/_svg
+      .down-click
+        i.down-click__ico.i-arrow-down
     .page-content
-      img(src="assets/img/bg-1.png").decline__img
+      .triangle
+        include ../core/_svg
       section.s-works
         .container
           h2.title.title_context Мои работы

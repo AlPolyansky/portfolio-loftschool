@@ -1,6 +1,9 @@
 *{
 	box-sizing: border-box;
 }
+html{
+	height: 16px;
+}
 html,body{
 	height: 100%;
 }
@@ -18,11 +21,15 @@ label{
 	cursor: pointer;
 }
 
+.page-content{
+	position: relative;
+}
+
 .wrapper{
 	width: 100%;
 	min-height: 100%;
 	position: relative;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 
@@ -31,7 +38,7 @@ label{
 	height: 100%;
 
 	.page-content{
-		display: table-row;
+		//display: table-row;
   		height: 100%;
 	}
 }	
@@ -48,17 +55,8 @@ label{
 	} */
 }
 
-.icon-click{
-		margin: 0 auto;
-		text-align: center;
-		opacity: .7;
-		font-size: 30px;
-		&__ico{
-			cursor:pointer;
-		}
-	}
 
-//is
+//icons
 
 [class^="i-"]:before, [class*=" i-"]:before {
   font-family: $fontIcon;

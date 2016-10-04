@@ -4,19 +4,22 @@ block variables
 	- var title = 'Blog'
 
 block content
+	.container
+		include ../modules/_sandwich
 	.wrapper.blog-page
 		header.header
-			.container
+			.container.header__container
 				.header__top-line
 					include ../modules/_social
-					include ../modules/_sandwich
 				.header__content
 					+avatar("avatar.jpg","Моё фото","Моё фото")
 					h1.title.title_context Блог
 					small.total-text Статьи, которые я написал
-			.header__triangle
-				include ../core/_svg
+			.down-click
+				i.down-click__ico.i-arrow-down
 		.page-content
+			.triangle
+				include ../core/_svg
 			.container
 				.content-wrap
 					aside.sidebar
