@@ -1,7 +1,8 @@
 $coverWidth : 380px;
 
 .cover{
-	width: $coverWidth;
+	width: 100%;
+	max-width: $coverWidth;
 	margin: 0 auto;
 	border-radius: 5px;
 	//overflow: hidden;

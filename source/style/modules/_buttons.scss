@@ -59,6 +59,10 @@
 	width: 100%;
 	bottom: 120px;
 	z-index: 100;
+	@include trans(.3s);
+	&:hover{
+		opacity: 1;
+	}
 	&__ico{
 		cursor:pointer;
 	}

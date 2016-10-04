@@ -337,3 +337,14 @@ body{
 		}
 	}
 }
+
+// popUpWindow
+
+.popUpWindow{
+	color: $colorDark;
+	background-color: rgba(#000,.7);
+	&__close{
+		border: 4px solid darken($colorDark,10%);
+		background-color: darken($colorDark,10%);
+	}
+}

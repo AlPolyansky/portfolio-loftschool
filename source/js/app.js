@@ -4,9 +4,13 @@ var startModule = (function(){
 
     var $content = $(".page-content");
     var $downClick = $(".down-click__ico");
+    var $downClickToContent = $(".wrapper:not(.works-page)").find($downClick);
+    var $downClickToForm = $(".works-page").find($downClick);
     var $wrapper = $(".wrapper");
     var $menu = $(".nav");
+    var $sAbout = $(".s-about");
     var $sandwich = $(".sandwich");
+    var $submit = $("[type = submit]");
     var scrollSpeed = 700;
 
 
@@ -33,24 +37,54 @@ var startModule = (function(){
         return element.clone(true).prependTo(parent);
     }
 
+
     // Функции модуля
 
+    var createPopUpWindow = function(text){
+        $("<div class='popUpWindow hide'><div class='popUpWindow__container'><span class='popUpWindow__close'></span><p class='popUpWindow__text'>"+ text +"</p></div></div>"
+            ).prependTo($("body"));
+
+        var $popUpWindow = $(".popUpWindow");
+        var position = $(window).scrollTop();
+        $popUpWindow.removeClass("hide");
+        $("body").toggleClass("no-scroll");
+        $popUpWindow.css({"top":position});
+
+
+
+       
+        $(".popUpWindow__close").on("click",function(){
+            $(this).closest($popUpWindow).addClass("hide");
+            $("body").toggleClass("no-scroll");
+            var $this = $(this);
+            setTimeout(function(){
+                $this.closest($($popUpWindow)).remove();
+            },400);
+            //$(this).closest($(".popUpWindow")).remove() 
+
+        });
+    }
 
     var _addPopUpMenu = function(){
-        cloneInsert($("body"),$menu).wrapAll('<div class="popUpMenu"></div>').addClass("popUpMenu__inner");
-        var $popUpMenu = $(".popUpMenu");
+        return cloneInsert($("body"),$menu).wrapAll('<div class="popUpMenu"></div>').addClass("popUpMenu__inner");
     }
+
 
 
     // Прослушка
 
     var _setUpListner = function(){
-        $downClick.on("click",function(){scrollTo($content,scrollSpeed)});
+        $downClickToContent.on("click",function(){scrollTo($content,scrollSpeed)});
+        $downClickToForm.on("click",function(){scrollTo($sAbout,scrollSpeed)});
         $sandwich.on("click",function(){
             $(this).toggleClass("sandwich_on");
             $("body").toggleClass("no-scroll");
             $(".popUpMenu").toggleClass("popUpMenu_show");
         })
+        $submit.on("click",function(e){
+            e.preventDefault();
+            createPopUpWindow("Привет я попап окно!");
+        });
     }
 
 
@@ -61,6 +95,7 @@ var startModule = (function(){
             // происходит сразу
             _addPopUpMenu();
             _setUpListner();
+            
             
         }
     };
