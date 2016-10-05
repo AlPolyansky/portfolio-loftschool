@@ -1,46 +1,71 @@
-$coverWidth : 380px;
+// ================== 1800 width ================== //
+
+
+$cover_width : 380px;
+$cover_s-about_gutter-bottom: 59px;
+$cover-s-about_gutter-top: 28px;
+
 
 .cover{
 	width: 100%;
-	max-width: $coverWidth;
+	max-width: $cover_width;
 	margin: 0 auto;
 	border-radius: 5px;
+	overflow: hidden;
+}
+
+.cover_s-about{
+	padding-top: $cover-s-about_gutter-top;
+	margin-bottom: $cover_s-about_gutter-bottom;
 }
 
 
-.cover-button__wrap{
-	display: table;
-	width: 100%;
-}
 
-.cover-button__text{
-	position: absolute;
-	font-size: 16px;
-	@include center();
-}
+// ================== 1200 width ================== //
 
-.button__wrap{
-	display: table-cell;
-	&:last-child{
-		border-right: none;
+
+$cover_s-about_gutter-bottom: 59px;
+
+
+@include apply-to($m,max){
+	.cover_s-about{
+		margin-bottom: $cover_s-about_gutter-bottom;
 	}
-	&:first-child{
-		border-left: none;
+}
+
+
+
+// ================== 768 width ================== //
+
+
+$cover_s-about_gutter-bottom: 43px;
+$cover_width : 350px;
+
+
+@include apply-to($s,max){
+	.cover{
+		width: $cover_width;
 	}
-
+	.cover_s-about{
+		margin-bottom: $cover_s-about_gutter-bottom;
+	}
 }
 
-.cover-button{
-	padding: 5px 0;
-	border:none;
-	width: 100%;
-	cursor:pointer;
-	outline: none;
-	position: relative;
-	height: 45px;
-	@include trans(.2s);
-}
 
-.cover__content__info{
-	
+// ================== 480 width ================== //
+
+
+$cover_s-about_gutter-bottom: 29px;
+$cover-s-about_gutter-top: 37px;
+$cover_width : 100%;
+
+
+@include apply-to($xs,max){
+	.cover{
+		max-width: $cover_width;
+	}
+	.cover_s-about{
+		padding-top: $cover-s-about_gutter-top;
+		margin-bottom: $cover_s-about_gutter-bottom;
+	}
 }

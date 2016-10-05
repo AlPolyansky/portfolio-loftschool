@@ -8,8 +8,6 @@ $footer__wrap-padding: 0;
 
 
 .footer{
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 }
 
@@ -50,7 +48,7 @@ $footer__wrap-padding: 0;
 
 // ================== 1200 width ================== //
 
-$footer__wrap-padding: 26px;
+$footer__wrap-padding: 0;
 	$footer__list_gutter-bottom: 0px;
 	$footer__list_container-size: 1200px;
 
@@ -104,7 +102,7 @@ $footer__wrap-padding: 0;
 // ================== 480 width ================== //
 
 $footer__list_gutter-top: 0;
-	$footer__item_gutter: 20px 18px;
+	$footer__item_gutter: 12px 18px;
 	$footer__item__last_margin-top: 0;
 	$footer__item_2-elem_padding-left: 18px;
 	$footer__item_text-align: center;
@@ -114,20 +112,27 @@ $footer__list_gutter-top: 0;
 
 @include apply-to($xs,max){
 	.footer__list{
-		margin-top: $footer__list_gutter-top;
+		padding-top: $footer__list_gutter-top;
 	}
 	.footer__item{
 		@include col(12);
 		padding: $footer__item_gutter;
 		text-align: $footer__item_text-align;
+		&:first-child(){
+			padding-bottom: 8px;
+		}
 		&:nth-child(2){
+			padding-top: 16px;
 			padding-left: $footer__item_2-elem_padding-left;
+			padding-bottom: 15px;
 			&:before{
 				display: $footer__item_display_before;
 			}
 		}
 		&:last-child{
 			margin-top: $footer__item__last_margin-top;
+			padding-bottom: 0;
+			letter-spacing: -0.2px;
 			&:after{
 				display: $footer__item_display_after;
 			}
@@ -145,7 +150,7 @@ $footer__list_gutter-top: 0;
 			right: 0;
 			bottom: 0;
 			margin: 0 auto;
-			width: 90%;
+			width: 94%;
 		}
 	}
 }

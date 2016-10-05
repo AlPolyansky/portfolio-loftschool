@@ -1,3 +1,6 @@
+// ================== 1800 width ================== //
+
+
 .social{
 	padding: 0;
 	margin: 0;
@@ -18,6 +21,7 @@
 
 .social_footer{
 	.social{
+		text-align: left;
 		&__link{
 			opacity: .5;
 			&:hover{
@@ -32,10 +36,14 @@
 
 
 $social__footer_margin-left: -3px;
+$social__footer_align: center;
 
-@include apply-to($m,max){
+@include apply-to($xs,max){
 	.social_footer{
-		margin-left: $social__footer_margin-left;
+		.social{
+			text-align: $social__footer_align;
+			margin-left: $social__footer_margin-left;
+		}
 	}
 }
 

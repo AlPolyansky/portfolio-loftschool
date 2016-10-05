@@ -6,6 +6,7 @@ var startModule = (function(){
     var $downClick = $(".down-click__ico");
     var $downClickToContent = $(".wrapper:not(.works-page)").find($downClick);
     var $downClickToForm = $(".works-page").find($downClick);
+    var $upClick = $(".up-click__ico");
     var $wrapper = $(".wrapper");
     var $menu = $(".nav");
     var $sAbout = $(".s-about");
@@ -138,18 +139,19 @@ var startModule = (function(){
     var _setUpListner = function(){
         $downClickToContent.on("click",function(){scrollTo($content,scrollSpeed)});
         $downClickToForm.on("click",function(){scrollTo($sAbout,scrollSpeed)});
+        $upClick.on("click",function(){scrollTo($("body"),scrollSpeed)});
         $sandwich.on("click",function(){
             $(this).toggleClass("sandwich_on");
             $("body").toggleClass("no-scroll");
             $(".popUpMenu").toggleClass("popUpMenu_show");
         })
-        $("[type = submit]").on("click",function(e){
+        /*$("[type = submit]").on("click",function(e){
             e.preventDefault();
             var $this = $(this);
             //console.log($this.closest("form").find(".form__item"));
             validForm($(this));
             //createPopUpWindow("Привет я попап окно!");
-        });
+        });*/
     }
 
 

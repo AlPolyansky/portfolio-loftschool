@@ -1,69 +1,23 @@
-.sandwich{
-	height: 36px;
-	width: 41px;
-	cursor: pointer;
-	margin-top: 3px;
-	z-index: 3000;
-	position: absolute;
-	right: 30px;
-	top: 28px;
-	@include apply-to($xs,max){
-		width: 25px;
-		height: 25px;
-	}
-	&__line{
-		@include trans(.3s);
-		width: 100%;
-		display: block;
-		height: 5px;
-		margin-bottom: 10px;
-		border-radius: 5px;
-		@include apply-to($xs,max){
-			margin-bottom: 5px;
-		}
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	&__line__middle{
-		opacity: 1;
-	}
-}
-
-.sandwich_on{
-	
-	.sandwich__line__top{
-		transform: rotate(45deg) translate(10px, 12px);
-		margin-bottom: 0;
-		@include apply-to($xs,max){
-			transform: rotate(45deg) translate(7px, 7px);
-		}
-	}
-	.sandwich__line__middle{
-		opacity: 0;
-	}
-	.sandwich__line__bottom{
-		transform: rotate(-45deg) translate(2px, -4px);
-		@include apply-to($xs,max){
-			transform: rotate(-45deg) translate(4px, -4px);
-		}
-	}
-}
+// ================== 1800 width ================== //
 
 
-.down-click{
-	text-align: center;
-	opacity: .7;
-	font-size: 30px;
-	position: absolute;
+.buttons{
+	@include clear();
 	width: 100%;
-	bottom: 120px;
-	z-index: 100;
-	@include trans(.3s);
-	&:hover{
-		opacity: 1;
-	}
-	&__ico{
-		cursor:pointer;
+	&__item{
+		outline: none;
+		border: none;
+		width: 100%;
+		cursor: pointer;
+		@include trans(.2s);
+		padding: 14px 0;
 	}
 }
+
+.buttons_about-me{
+	.buttons__wrap{
+		float: left;
+		width: 50%;
+	}
+}
+

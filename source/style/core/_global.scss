@@ -50,14 +50,7 @@ label{
 
 
 
-.container{
-	@include container(auto,30px);
-	max-width: 1800px;
-	/* @include apply-to(1799px,max){
-		@include container(auto,20px);
-		max-width: 1200px;
-	} */
-}
+
 
 
 //icons

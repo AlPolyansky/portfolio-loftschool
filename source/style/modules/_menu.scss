@@ -33,7 +33,7 @@ $nav__item_padding_right : 35px;
 
 
 
-// ================== 768 width ================== //
+// ================== 1200 width ================== //
 
 
 $nav__item_padding_right : 13px;
@@ -59,7 +59,7 @@ $nav__item_padding_right_last: 0;
 
 // ================== 768 width ================== //
 
-$nav__item_padding_right : 6px;
+$nav__item_padding_right : 16px;
 $nav__item_padding_right_last: 0;
 $nav_footer_font-size: 14px;
 
@@ -86,13 +86,21 @@ $nav_footer_font-size: 14px;
 
 
 $nav_footer_text-align: center;
-
+$nav_footer_margin-bottom: -8px;
+$nav__item_padding_right : 6px;
 
 @include apply-to($xs,max){
 
 	.nav_footer{
 		.nav{
 			text-align: $nav_footer_text-align;
+			margin-bottom: $nav_footer_margin-bottom;
+			&__item{
+				padding-right: $nav__item_padding_right;
+				&:last-child{
+					padding-right: $nav__item_padding_right_last;
+				}
+			}
 		}
 	}
 

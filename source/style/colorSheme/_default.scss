@@ -120,7 +120,7 @@ body{
 
 
 
-.cover-button{
+.buttons__item{
 	background-color: rgba($colorMain,.85);
 	color: $colorBase;
 	&:hover{
@@ -140,10 +140,13 @@ body{
 	}
 }
 
-.button__wrap{
-	border-left: 1px solid rgba($colorBase,.5);
-	border-right: 1px solid rgba($colorBase,.5);
-	
+.buttons__wrap{
+	&:first-child{
+		border-right: 1px solid rgba($colorBase,.5);
+	}
+	&:last-child{
+		border-left: 1px solid rgba($colorBase,.5);
+	}
 }
 
 // Footer

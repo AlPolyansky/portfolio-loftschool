@@ -23,12 +23,12 @@ block content
         include ../core/_svg
       section.s-works
         .container
-          h2.title.title_context Мои работы
+          h2.title.title_context.title_my-works Мои работы
       section.s-slider
         include ../modules/_slider
       section.s-about
         .container
-          h2.title.title_context Что обо мне говорят
+          h2.title.title_context.title_about-say Что обо мне говорят
           .recall
             .recall__item
               .avatar
@@ -46,21 +46,24 @@ block content
               small.recall__author
                 span.recall__name Зар Захаров
               | — преподаватель
-          .cover
-            .title Связаться со мной
-            form(method="",action="#").form
-              .input-wrap
-                input(type='text' name='name' placeholder='Имя').form__item
-                input(name='email' type='text' placeholder="Email").form__item
-                textarea(name='text' placeholder="Ваше сообщение").form__item.form__item_text
-              .cover-button__wrap
-                .button__wrap
-                  button(type="submit").cover-button
-                    span.cover-button__text Отправить
-                .button__wrap
-                  button(type="reset").cover-button
-                    span.cover-button__text Очистить
-          .icon-click
-            i.icon-click__ico.i-arrow-up
-    include ../modules/_footer
+          .cover.cover_s-about
+            .title.title_cover_about-say Связаться со мной
+            form(method="",action="#").form.form_about-say
+              .form__item
+                input(type='text' name='name' placeholder='Имя').form__input
+              .form__item
+                input(name='email' type='text' placeholder="Email").form__input
+              .form__item
+                textarea(name='text' placeholder="Ваше сообщение").form__textarea
+              .buttons.buttons_about-me
+                .buttons__wrap
+                  button(type="submit").buttons__item
+                    span.buttons__text Отправить
+                .buttons__wrap
+                  button(type="reset").buttons__item
+                    span.buttons__text Очистить
+          .up-click
+            i.up-click__ico.i-arrow-up
+        include ../modules/_footer
+    
 

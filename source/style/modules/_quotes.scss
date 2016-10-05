@@ -2,6 +2,7 @@
 
 $qutes_font-size: 16px;
 $quote_max-width: 480px;
+$quote_text-align: left;
 
 $quote__simple_max-width: 353px;
 
@@ -10,6 +11,7 @@ $quote__simple_max-width: 353px;
 	padding: 0;
 	margin: 0;
 	opacity: .5;
+	text-align: $quote_text-align;
 	font-size: rem($qutes_font-size);
 	max-width: $quote_max-width;
 	&__text{
@@ -25,6 +27,7 @@ $quote__simple_max-width: 353px;
 }
 
 .quote__simple{
+	text-align: $quote_text-align;
 	max-width: $quote__simple_max-width;
 	@include fonts($fontMain, $f-l);
 	top: -3px;
@@ -61,7 +64,8 @@ $quote__simple_max-width: 297px;
 
 
 $quote_max-width: 100%;
-$quotes_margin-bottom: 20px;
+$quotes_margin-bottom: 28px;
+$quote_text-align: left;
 
 $quote__simple_max-width: 100%;
 $quote__simple_display: inline-block;
@@ -71,8 +75,10 @@ $quote__simple_display: inline-block;
 	.quote{
 		margin-bottom: $quotes_margin-bottom;
 		max-width: $quote_max-width;
+		text-align: $quote_text-align;
 	}
 	.quote__simple{
+		text-align: $quote_text-align;
 		display: $quote__simple_display;
 		max-width: $quote__simple_max-width;
 	}
@@ -84,11 +90,20 @@ $quote__simple_display: inline-block;
 // ================== 480 width ================== //
 
 
-$quotes_margin-top: 20px;
+$quotes_margin-top: 14px;
+$quotes_margin-bottom: 19px;
+$quote_text-align: center;
 
 
 @include apply-to($xs,max){
 	.quote{
+		text-align: $quote_text-align;
 		margin-top: $quotes_margin-top;
+		line-height: 13px;
+		margin-bottom: $quotes_margin-bottom;
+	}
+	.quote__simple{
+		line-height: 27px;
+		text-align: $quote_text-align;
 	}
 }

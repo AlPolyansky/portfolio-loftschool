@@ -1,6 +1,13 @@
+// ================== 1800 width ================== //
+
+$title_font-size: 63px;
+$title_cover_about-say_font-size: 35px;
+$title_cover_about-say_margin-bottom: 30px;
+
+
 .title{
 	text-align: center;
-	font-size: 63px;
+	font-size: rem($title_font-size);
 	max-width: 435px;
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -21,18 +28,66 @@
 
 .title_context{
 	&:before{
-	 content: "";
-    display: block;
-    position: absolute;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 116%;
-    height: 178%;
-    opacity: .1;
-    z-index: -1;
-    top: 25%;
-    left: 52%;
-    transform: translate(-50%, -50%);
+		content: "";
+		display: block;
+		position: absolute;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: 116%;
+		height: 178%;
+		opacity: .1;
+		z-index: -1;
+		top: 25%;
+		left: 52%;
+		transform: translate(-50%, -50%);
 	}
+}
+
+.title_my-works{
+	margin-top: 0px;
+	margin-bottom: 33px;
+	&:before{
+		@include img($image + "works.png");
+	}
+}
+
+.title_about-say{
+	margin-bottom: 33px;
+	&:before{
+		@include img($image + "about.png");
+		top: 31%;
+	}
+	&:after{
+		margin-top: 23px;
+	}
+}
+
+.title_cover_about-say{
+	font-size: rem($title_cover_about-say_font-size);
+	margin-bottom: $title_cover_about-say_margin-bottom;
+	&:after{
+		margin-top: 23px;
+	}
+}
+
+
+
+// ================== 480 width ================== //
+
+$title_cover_about-say_font-size: 20px;
+$title_cover_about-say_margin-bottom: 21px;
+$title_cover_about-say_after_gutter: 13px;
+
+
+@include apply-to($xs,max){
+
+.title_cover_about-say{
+	font-size: rem($title_cover_about-say_font-size);
+	margin-bottom: $title_cover_about-say_margin-bottom;
+	&:after{
+		margin-top: $title_cover_about-say_after_gutter;
+	}
+}
+
 }
