@@ -164,12 +164,13 @@
 	height: 100%;
 	margin: auto;
 	z-index: 4000;
+	display: none;
 	@include trans(.3s);
 
 	&__container{
 		width: 100%;
-		max-width: 70vh;
-		margin: 0 auto;
+		max-width: 60vh;
+		margin: 0 20px;
 		background-color: #fff;
 		top: 30vh;
 		position: absolute;
@@ -178,6 +179,7 @@
 		padding: 20px;
 		border-radius: 10px;
 		box-shadow: 10px 7px 5px -2px rgba(0,0,0,0.15);
+
 	}
 	&__text{
 		font-size: 40px;

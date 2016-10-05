@@ -65,8 +65,70 @@ var startModule = (function(){
         });
     }
 
+    var validForm = function(thisElem){
+        var pattern = /^([0-9a-zA-Z_-]+\.)*[0-9a-zA-Z_-]+@[0-9a-zA-Z_-]+(\.[0-9a-zA-Z_-]+)*\.[a-z]{2,6}$/;
+        var form = thisElem.closest("form");
+        var items = form.find(".input-wrap");
+        var inputText = items.filter(".input-text");
+        var checkbox = items.find('[name = "checkbox"]');
+        var radio = items.find('[name = "radio"]');
+        var error = {
+                number : 0,
+                text : ""
+        };
+        inputText.each(function(){
+            var $this = $(this);
+            if($this.children("input").val() === ""){
+                error.number = 1;
+                error.text = "Заполнены не все поля";
+            }
+            
+            /*if($this.attr("name") == "name"){
+                
+            }*/
+            
+        })
+        if(!error.number){
+            if(!checkbox.prop("checked")){
+                error.number = 2;
+                error.text = "Вы не человек!";
+            }else{
+                if(!radio.prop("checked")){
+                    error.number = 3;
+                    error.text = "Вы точно не человек!";
+                }
+                else{
+                    error.text = "Прошел";
+                }
+            }
+           
+
+            return createPopUpWindow(error.text);
+            //pass.hide();
+            //console.log(items.hide());
+            //items.hide()
+            /*if(pattern.test(email.val())){
+                log("Продолжаем путь")
+            }else{
+                error.number = 2;
+                error.text = "Email не правильный";
+                return createPopUpWindow(error.text);
+            };*/
+        }else{
+            return createPopUpWindow(error.text);
+        }
+      /*  if(error.number){
+            
+        }else{
+            return createPopUpWindow(error.text);
+        }*/
+        
+
+    }
+
     var _addPopUpMenu = function(){
         return cloneInsert($("body"),$menu).wrapAll('<div class="popUpMenu"></div>').addClass("popUpMenu__inner");
+
     }
 
 
@@ -81,9 +143,12 @@ var startModule = (function(){
             $("body").toggleClass("no-scroll");
             $(".popUpMenu").toggleClass("popUpMenu_show");
         })
-        $submit.on("click",function(e){
+        $("[type = submit]").on("click",function(e){
             e.preventDefault();
-            createPopUpWindow("Привет я попап окно!");
+            var $this = $(this);
+            //console.log($this.closest("form").find(".form__item"));
+            validForm($(this));
+            //createPopUpWindow("Привет я попап окно!");
         });
     }
 

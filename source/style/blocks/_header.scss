@@ -15,7 +15,7 @@
 	}
 	&__top-line{
 		@include clear();
-		margin-top: 24px;
+		padding-top: 24px;
 		
 		position: relative;
 		z-index:	100;

@@ -12,7 +12,7 @@ $animateView : 800px;
 	min-height: 900px;
 	@include apply-to($xs,max){
 		height: 100%;
-		min-height: 780px;
+		min-height: 580px;
 	}
 	text-align: center;
 	.cover{
@@ -32,6 +32,19 @@ $animateView : 800px;
 			transform: none;
 			margin-bottom: 40px;
 		}
+		.button__wrap{
+			@include apply-to($xs,max){
+				&:nth-child(1){
+				}
+				&:nth-child(2){
+					width: 32%;
+				}
+				&:nth-child(3){
+				}
+			}
+			
+			
+		}
 		.cover-button{
 			display: block;
 			height: auto;
@@ -42,8 +55,9 @@ $animateView : 800px;
 				padding: 15px 24px;
 			}
 			@include apply-to($xs,max){
-				padding: 15px 0px;
+				padding: 16px 0px;
 				font-size: 14px;
+				width: 90%;
 			}
 		}
 	}
@@ -233,19 +247,7 @@ $animateView : 800px;
 		}
 	}
 	
-	.copyright{
-		text-align: center;
-		position: absolute;
-		right: 0;
-		left: 0;
-		bottom: 41px;
-		@include apply-to($xs,max){
-			position: relative;
-			top: 20px;
-			font-size: 14px;
-
-		}
-	}
+	
 	.hide{
 		margin-bottom: 0;
 	}

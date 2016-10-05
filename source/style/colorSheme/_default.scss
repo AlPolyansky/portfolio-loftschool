@@ -148,10 +148,14 @@ body{
 
 // Footer
 
-.footer__wrap{
+.footer{
 	background-color: rgba($colorDark, .85);
 }
-.footer__copyright{
+
+.footer__wrap{
+	//background-color: rgba($colorDark, .85);
+}
+.copyright_footer{
 	background-color: rgba($colorMain,.85);
 }
 
@@ -172,7 +176,7 @@ body{
 		}
    }
    &__item{
-   	&:before{
+   	&:before,&:after{
    		background-color: rgba($colorBase,.5);
    	}
    }

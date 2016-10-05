@@ -16,4 +16,26 @@
 	}
 }
 
+.social_footer{
+	.social{
+		&__link{
+			opacity: .5;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}	
+}
+
+
+// ================== 480 width ================== //
+
+
+$social__footer_margin-left: -3px;
+
+@include apply-to($m,max){
+	.social_footer{
+		margin-left: $social__footer_margin-left;
+	}
+}
 

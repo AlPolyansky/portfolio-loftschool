@@ -1,82 +1,151 @@
-.footer{
+// ================== 1800 width ================== //
 
-	font-size: 0;
-	@include container(100%);
-	padding-left: 0;
-	padding-right: 0;
+$footer__wrap-padding: 0; 
+	$footer__list_gutter-top: 27px;
+	$footer__list_gutter-bottom: 52px;
+	$footer__list_container-size : 1800px;
+		$footer__item_gutter: 0 30px;
+
+
+.footer{
 	position: absolute;
 	bottom: 0;
-	&__wrap{
-		padding-top: 29px;
-		padding-bottom: 52px;
-		position: relative;
+	width: 100%;
+}
+
+.footer__wrap{
+	position: relative;
+	padding: $footer__wrap-padding;
+}
+
+.footer__list{
+	@include container($footer__list_container-size);
+	@include clear();
+	padding: 0;
+	width: 100%;
+	padding-top: $footer__list_gutter-top;
+	margin-bottom: $footer__list_gutter-bottom;
+	
+}
+
+.footer__item{
+	position: relative;
+	@include col(4);
+	padding: $footer__item_gutter;
+	&:first-child:before{
+		display: none;
 	}
-	&__copyright{
-		text-align: center;
-		@include fonts($fontMain, $f-l);
-		font-size: 16px;
-		padding-top: 7px;
-		padding-bottom: 12px;
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 87px;
+		left: 0;
 	}
-	&__item{
-		font-size: 16px;
-		@include col(4);
-		vertical-align: top;
-		position: relative;
+}
+
+
+
+
+// ================== 1200 width ================== //
+
+$footer__wrap-padding: 26px;
+	$footer__list_gutter-bottom: 0px;
+	$footer__list_container-size: 1200px;
+
+@include apply-to($m,max){
+	.footer__wrap{ padding-bottom: $footer__wrap-padding; }
+	.footer__list{
+		max-width: $footer__list_container-size;
+		margin-bottom: $footer__list_gutter-bottom;
+	}
+
+}
+
+
+// ================== 768 width ================== //
+
+$footer__wrap-padding: 0;
+	$footer__list_container-size: 768px;
+		$footer__item_gutter: 0 24px;
+		$footer__item_2-elem_padding-left: 29px;
+		$footer__item_margin-top: 46px;
+		$footer__item_display_before: none;
+		$footer__item_2-elem_display_before: block;
+
+
+@include apply-to($s,max){
+	.footer__wrap{ padding-bottom: $footer__wrap-padding; }
+	.footer__list{
+		max-width: $footer__list_container-size;
+	}
+	.footer__item{
+		@include col(6);
+		padding: $footer__item_gutter;
 		&:before{
-			position: absolute;
-			width: 1px;
-			height: 87px;
+			display: $footer__item_display_before;
 		}
-		&:first-child{
+		&:nth-child(2){
+			padding-left: $footer__item_2-elem_padding-left;
 			&:before{
-				height: 0;
-				width: 0;
+				display: $footer__item_2-elem_display_before;
 			}
 		}
-	}
-	&__list{
-		@include clear();
-		max-width: 1800px;
-		margin: 0 auto;
-		//margin-bottom: 30px;
-	}
-	&__text{
-		max-width: 353px;
-		@include fonts($fontMain, $f-l);
-		top: -3px;
-		position: relative;
-		line-height: 23px;
-		margin-left: 30px;
-	}
-	.quote{
-		padding: 0;
-		margin: 0;
-		&__text{
-			margin: 0;
-			position: relative;
-			top: -3px;
-			max-width: 480px;
-			@include fonts($fontMain, $f-l-i);
-			margin-left: 30px;
-			line-height: 25px;
-		}
-		&__author{
-			margin-left: 30px;
-			@include fonts($fontMain, $f-b-i);
+		&:last-child{
+			@include col(12);
+			padding: $footer__item_gutter;
+			margin-top: $footer__item_margin-top;
 		}
 	}
-	.nav{
-		margin-bottom: 18px;
-		margin-left: 31px;
+}
+
+
+// ================== 480 width ================== //
+
+$footer__list_gutter-top: 0;
+	$footer__item_gutter: 20px 18px;
+	$footer__item__last_margin-top: 0;
+	$footer__item_2-elem_padding-left: 18px;
+	$footer__item_text-align: center;
+	$footer__item_display_before: none;
+	$footer__item_display_after: none;
+
+
+@include apply-to($xs,max){
+	.footer__list{
+		margin-top: $footer__list_gutter-top;
 	}
-	.social{
-		margin-left: 29px;
-		&__link{
-			opacity: .5;
-			&:hover{
-				opacity: 1;
+	.footer__item{
+		@include col(12);
+		padding: $footer__item_gutter;
+		text-align: $footer__item_text-align;
+		&:nth-child(2){
+			padding-left: $footer__item_2-elem_padding-left;
+			&:before{
+				display: $footer__item_display_before;
 			}
+		}
+		&:last-child{
+			margin-top: $footer__item__last_margin-top;
+			&:after{
+				display: $footer__item_display_after;
+			}
+		}
+		&:before{
+			display: $footer__item_display_before;
+		}
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0 auto;
+			width: 90%;
 		}
 	}
 }

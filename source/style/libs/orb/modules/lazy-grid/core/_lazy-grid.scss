@@ -1,4 +1,4 @@
-@mixin container($width: $containerWidth, $padding: $paddingContiner){
+@mixin container($width: $containerWidth, $padding: $paddingContiner,$clear: false){
 	@if($box-sizing == true){
 		box-sizing: border-box;
 	}
@@ -8,13 +8,15 @@
 	padding-left: $padding;
 	padding-right: $padding;
 	margin : 0 auto;
-	&:after,&:before{
-		display: table;
-		content: "";
+	@if($clear == true){
+			&:after,&:before{
+			display: table;
+			content: "";
+		}
 	}
 }
 
-@mixin col($num,$padding: $gutter){
+@mixin col($num,$padding: $gutter,$clear: false){
 	@if($box-sizing == true){
 		box-sizing: border-box;
 	}
@@ -23,9 +25,11 @@
 	padding-right: $padding;
 	width: 100%;
 	max-width: percentage($num/$cols);
-	&:after,&:before{
-		display: table;
-		content: "";
+	@if($clear == true){
+			&:after,&:before{
+			display: table;
+			content: "";
+		}
 	}
 }
 
