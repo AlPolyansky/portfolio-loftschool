@@ -79,13 +79,13 @@ body{
 
 // Recall
 
-.recall{
+.quote--recall{
 	color: lighten(desaturate(adjust-hue($colorDark, -164.3182), 4.5965), 11.1765); // #5d5a55
 }
-.recall__author{
+.quote--recall .quote__author{
 	color: lighten(saturate(adjust-hue($colorDark, 0.0000), 0.0000), 0.0000); // #373e42
 }
-.recall__name{
+.quote--recall .quote__author{
 	color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839
 }
 

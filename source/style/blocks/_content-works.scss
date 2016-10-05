@@ -1,65 +1,42 @@
-// Works
+// ================== 1800 width ================== //
 
-.works-page{
+$background-image: "about-bg.png";
+$top-gutter: 56px;
+
+
+.s-about{
+	text-align: center;
+	padding-top: $top-gutter;
+	@include img($image + $background-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+
+
+// ================== 768 width ================== //
+
+
+$top-gutter: 36px;
+
+
+@include apply-to($s,max){
 	.s-about{
-		text-align: center;
-		@include img($image + "about-bg.png");
-		background-repeat: no-repeat;
-		background-attachment: cover;
-		background-position: center bottom;
-		padding-top: 56px;
-		.recall{
-			max-width: 805px;
-			margin: 0 auto;
-			text-align: center;
-			font-size: 0;
-			margin-bottom: 38px;
-			.avatar{
-				height: 77px;
-				width: 77px;
-				margin: 0 auto;
-				margin-bottom: 18px;
-			}
-			&__item{
-				font-size: 16px;
-				padding: 0 12px;
-				width: 100%;
-				display: inline-block;
-				@include fonts($fontMain,$f-l-i);
-				max-width: 50%;
-				margin-bottom: 30px;
-			}
-			&__text{
-				text-align: left;
-				margin-top: 0;
-				line-height: 25px;
-				margin-bottom: 22px;
-				position: relative;
-				&:before{
-					display: block;
-					content: "";
-					position: absolute;
-					width: 100%;
-					height: 58px;
-					background-image: url("../img/quote.png");
-					background-repeat: no-repeat;
-					background-size: contain;
-					top: -26px;
-					left: 3px;
-					z-index: -1;
-					opacity: .1;
-				}
-			}
-			&__author{
-				text-align: center;
-				display: block;
-				font-size: 16px;
-			}
-			&__name{
-				display: block;
-				margin-bottom: 6px;
-				@include fonts($fontMain,$f-b-i);
-			}
-		}
+		padding-top: $top-gutter;
+	}
+}
+
+
+
+// ================== 480 width ================== //
+
+
+$top-gutter: 29px;
+
+
+@include apply-to($xs,max){
+	.s-about{
+		padding-top: $top-gutter;
 	}
 }

@@ -2,6 +2,7 @@
 
 $container_width: 100%;
 $container_gutter: 30px;
+$container_footer_gutter: 0;
 
 .container{
 	@include container(auto,$container_gutter);
@@ -10,10 +11,35 @@ $container_gutter: 30px;
 }
 
 .container_footer{
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: $container_footer_gutter;
+	padding-right: $container_footer_gutter;
 }
 
+
+
+
+// ================== 768 width ================== //
+
+
+$container_width: 1800px;
+$container_gutter: 11px;
+$container_footer_gutter: 0;
+
+
+@include apply-to($s,max){
+
+	.container{
+		padding-left: $container_gutter;
+		padding-right: $container_gutter;
+		max-width: $container_width;
+	}
+
+	.container_footer{
+		padding-left: $container_footer_gutter;
+		padding-right: $container_footer_gutter;
+	}
+
+}
 
 
 
@@ -22,7 +48,7 @@ $container_gutter: 30px;
 
 
 $container_width: 1800px;
-$container_gutter: 11px;
+$container_gutter: 4px;
 $container_footer_gutter: 0;
 
 

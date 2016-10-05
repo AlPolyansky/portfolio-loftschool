@@ -23,31 +23,15 @@ block content
         include ../core/_svg
       section.s-works
         .container
-          h2.title.title_context.title_my-works Мои работы
+          h2.title.title--context.title--my-works Мои работы
       section.s-slider
         include ../modules/_slider
       section.s-about
         .container
-          h2.title.title_context.title_about-say Что обо мне говорят
-          .recall
-            .recall__item
-              .avatar
-                img(src="assets/img/man-1.png", alt="Мое Фото", title="Мое фото").avatar__img
-              p.recall__text.
-                Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              small.recall__author
-                span.recall__name Ковальчук Дмитрий
-                | — основатель Loftschool
-            .recall__item
-              .avatar
-                img(src="assets/img/man-2.png", alt="Мое Фото", title="Мое фото").avatar__img
-              p.recall__text.
-                Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-              small.recall__author
-                span.recall__name Зар Захаров
-              | — преподаватель
+          h2.title.title--context.title--about-say Что обо мне говорят
+          include ../modules/_recall
           .cover.cover_s-about
-            .title.title_cover_about-say Связаться со мной
+            .title.title--cover_about-say Связаться со мной
             form(method="",action="#").form.form_about-say
               .form__item
                 input(type='text' name='name' placeholder='Имя').form__input

@@ -1,10 +1,13 @@
 // ================== 1800 width ================== //
 
-$qutes_font-size: 16px;
+$qutes_font-size: rem(16px);
 $quote_max-width: 480px;
 $quote_text-align: left;
 
 $quote__simple_max-width: 353px;
+
+$quote--recall_text_gutter-bottom: 21px;
+$quote--recall_autor_gutter-bottom: 6px;
 
 
 .quote{
@@ -12,7 +15,7 @@ $quote__simple_max-width: 353px;
 	margin: 0;
 	opacity: .5;
 	text-align: $quote_text-align;
-	font-size: rem($qutes_font-size);
+	font-size: $qutes_font-size;
 	max-width: $quote_max-width;
 	&__text{
 		margin: 0;
@@ -35,12 +38,45 @@ $quote__simple_max-width: 353px;
 	line-height: 23px;
 }
 
+.quote--recall{
+	opacity: 1;
+	.quote__pre-text{
+		font-size: $qutes_font-size;
+		text-align: center;
+	}
+	.quote__text{
+		text-align: left;
+		margin-bottom: $quote--recall_text_gutter-bottom;
+		&:before{
+			display: block;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 58px;
+			@include img($image + "quote.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			top: -26px;
+			left: 3px;
+			z-index: -1;
+			opacity: .1;
+		}
+	}
+	.quote__author{
+		display: block;
+		margin-bottom: $quote--recall_autor_gutter-bottom;
+	}
+	.quote__PS{
+		display: block;
+	}
+}
+
 
 
 // ================== 1200 width ================== //
 
 
-$qutes_font-size : 14px;
+
 $quotes_margin-bottom: 29px;
 
 $quote__simple_max-width: 297px;
@@ -50,12 +86,12 @@ $quote__simple_max-width: 297px;
 
 	.quote{
 		margin-bottom: $quotes_margin-bottom;
-		font-size: rem($qutes_font-size);
+		
 	}
 
 	.quote__simple{
 			max-width: $quote__simple_max-width;
-			font-size: rem($qutes_font-size);
+			
 	}
 
 }
@@ -66,13 +102,17 @@ $quote__simple_max-width: 297px;
 $quote_max-width: 100%;
 $quotes_margin-bottom: 28px;
 $quote_text-align: left;
+$qutes_font-size : 14px;
 
 $quote__simple_max-width: 100%;
 $quote__simple_display: inline-block;
 
+$quote--recall_text_gutter-bottom: 8px;
+
 
 @include apply-to($s,max){
 	.quote{
+		font-size: rem($qutes_font-size);
 		margin-bottom: $quotes_margin-bottom;
 		max-width: $quote_max-width;
 		text-align: $quote_text-align;
@@ -81,6 +121,12 @@ $quote__simple_display: inline-block;
 		text-align: $quote_text-align;
 		display: $quote__simple_display;
 		max-width: $quote__simple_max-width;
+		font-size: rem($qutes_font-size);
+	}
+	.quote--recall{
+		.quote__text{
+			margin-bottom: $quote--recall_text_gutter-bottom;
+		}
 	}
 
 }
@@ -93,17 +139,38 @@ $quote__simple_display: inline-block;
 $quotes_margin-top: 14px;
 $quotes_margin-bottom: 19px;
 $quote_text-align: center;
+$quote_kerning: 13px;
+
+$quote__simple_kerning: 27px;
+
+$quote--recall__text_gutter-bottom: 11px;
+$quote--recall__author_gutter-bottom: 10px;
+$quote--recall_kerning: 23px;
+
 
 
 @include apply-to($xs,max){
 	.quote{
 		text-align: $quote_text-align;
 		margin-top: $quotes_margin-top;
-		line-height: 13px;
+		line-height: $quote_kerning;
 		margin-bottom: $quotes_margin-bottom;
 	}
 	.quote__simple{
-		line-height: 27px;
+		line-height: $quote__simple_kerning;
 		text-align: $quote_text-align;
+	}
+	.quote--recall{
+		.quote__text{
+			margin-bottom: $quote--recall__text_gutter-bottom;
+			line-height: $quote--recall_kerning;
+		}
+		.quote__pre-text{
+			font-size: $qutes_font-size;
+			text-align: center;
+		}
+		.quote__author{
+			margin-bottom: $quote--recall__author_gutter-bottom;
+		}
 	}
 }
