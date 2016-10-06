@@ -20,6 +20,17 @@ $cover-s-about_gutter-top: 28px;
 }
 
 
+.cover--map{
+		position: absolute;
+		@include center();
+		overflow: hidden;
+		margin: auto;
+		padding-bottom: 15px;
+		max-width: 380px;
+		z-index: 1000;
+		padding-top: 28px;
+}
+
 
 // ================== 1200 width ================== //
 
@@ -50,6 +61,11 @@ $cover_width : 350px;
 		padding-top: 24px;
 		margin-bottom: $cover_s-about_gutter-bottom;
 	}
+	.cover--map{
+		padding-top: 40px;
+		padding-bottom: 3px;
+		min-width: 380px;
+	}
 }
 
 
@@ -68,5 +84,17 @@ $cover_width : 299px;
 	.cover_s-about{
 		padding-top: $cover-s-about_gutter-top;
 		margin-bottom: $cover_s-about_gutter-bottom;
+	}
+	.cover--map{
+		padding-top: 21px;
+		padding-bottom: 3px;
+		min-width: 100%;
+		width: 100%;
+	}
+
+	.cover{
+		top: 0;
+		left: 0;
+		transform: none;
 	}
 }

@@ -1,0 +1,17 @@
+.s-map{
+		overflow: hidden;
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+	.map{
+		width: 100%;
+		min-height: 100vh;
+		position: absolute;
+	}
+
+	.google-map{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}

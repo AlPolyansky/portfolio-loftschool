@@ -46,21 +46,21 @@ block content
 							include ../modules/_skills 
 			section.s-map
 				#map.map
-				.cover
-					.title Контакты
+				.cover.cover--map
+					.title.title--extra Контакты
 					.contacts
 						ul.contacts__list
 							li.contacts__item 
 								i.i-skype.contacts__icon
-								| eclerrr1
+								span.contacts__text eclerrr1
 							li.contacts__item 
 								i.i-mail.contacts__icon
-								| eclerrrr@yandex.ru
+								span.contacts__text eclerrrr@yandex.ru
 							li.contacts__item 
 								i.i-phone2.contacts__icon
-								| +7 902 197 72 72
+								span.contacts__text +7 902 197 72 72
 							li.contacts__item 
 								i.i-map_marker.contacts__icon
-								|г. Санкт-Петербург, ул. Парашютная 22
+								span.contacts__text г. Санкт-Петербург, ул. Парашютная 22
 		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAiPkFwvucMZkm0oeAnfLNc4XGTjqgFlZw&callback=initMap', async, defer)
 		include ../modules/_footer 

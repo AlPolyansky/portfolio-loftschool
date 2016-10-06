@@ -144,6 +144,18 @@ $title_cover_about-say_font-size: rem(35px);
 				}
 			}
 		}
+		.s-map{
+			.cover{
+				.title--extra{
+					color: #566358;
+					font-size: rem(35px);
+					margin-bottom: 57px;
+					&:after{
+						bottom: -25px;
+					}
+				}
+			}	
+		}
 
 // ================== width >= 1800px ================== //
 
@@ -284,6 +296,16 @@ $title_cover_about-say_font-size: rem(35px);
 				@include fonts($fontMain,$f-m);
 
 			}
+		}
+		.s-map{
+			.cover{
+				.title--extra{
+					&:after{
+						bottom: -25px;
+						left: 2px;
+					}
+				}
+			}	
 		}
 
 }
@@ -489,6 +511,20 @@ $title_cover_about-say_font-size: rem(35px);
 				@include fonts($fontMain,$f-m);
 
 			}
+		}
+
+
+		.s-map{
+			.cover{
+				.title--extra{
+					margin-bottom: 38px;
+					&:after{
+						bottom: -16px;
+						left: 0px;
+						width: 56px;
+					}
+				}
+			}	
 		}
 
 }

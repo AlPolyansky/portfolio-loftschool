@@ -336,7 +336,7 @@ body{
 	.page-content{
 		color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
 	}
-	.cover{
+	.cover--map{
 		color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
 		background-color: rgba(darken(saturate(adjust-hue($colorBase, 72.0000), 20.0000), 4.9020),.85); //#f4f5f0
 		.title{
