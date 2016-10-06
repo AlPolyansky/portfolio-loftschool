@@ -30,22 +30,6 @@ $header-img: "header-bg.jpg";
 	
 }
 
-/* .header--back-text{
-	&:after{
-		content: "";
-    display: block;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    @include center(); 
-    opacity: .12;
-    top: 47%;
-		height: 315px;
-		@include img($image + "portfolio_header.svg")
-	}
-} */
 
 
 
@@ -53,58 +37,6 @@ $header-img: "header-bg.jpg";
 
 
 
-
-
-
-
-
-
-
-
-
-// Blog page
-
-.blog-page{
-	.header{
-		&:after{
-			height: 313px;
-   		bottom: -96px;
-		}
-		&__top-line{
-			margin-bottom: 18px;
-		}
-		.avatar{
-			margin-bottom: 18px;
-		}
-		.title{
-			@include fonts($fontExtra,$f-r);
-			letter-spacing: 2px;
-			margin-bottom: 28px;
-		}
-		.title_context{
-			&:before{
-				background-image: url("../img/blog_header.svg");
-				height: 217%;
-				top: 58%;
-				left: 50%;
-				width: 100%;
-			}
-		}
-	}
-}
-
-// About page
-
-.about-page{
-	.header{
-		&__top-line{
-			margin-bottom: 92px;
-		}
-		.avatar{
-			margin-bottom: 22px;
-		}
-	}
-}
 
 
 
