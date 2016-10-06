@@ -15,6 +15,14 @@ $avatar--recal_size: 77px;
 		}
 	}
 
+	.avatar-big{
+		overflow: hidden;
+		@include trans(.3s);
+		&__img{
+			width: 100%;
+		}
+	}
+
 
 
 	// ======= Common ======= //
@@ -33,9 +41,34 @@ $avatar--recal_size: 77px;
 			margin-bottom: 19px;
 		}
 	}
+	.s-about-me{
+		.avatar-big{
+			max-height: 391px;
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 28px;
+			position: relative;
+		}
+	}
 
 
 
+// ================== width < 1200 ================== //
+
+
+@include apply-to($m - 1,max){
+
+	.s-about-me{
+		.avatar-big{
+			max-height: 416px;
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 39px;
+			position: relative;
+		}
+	}
+
+}
 
 
 // ================== 768 width ================== //
@@ -75,6 +108,13 @@ $avatar--recal_size: 51px;
 	.header{
 		.avatar{
 			margin-bottom: 29px;
+		}
+	}
+
+	.s-about-me{
+		.avatar-big{
+			max-height: 284px;
+			margin-bottom: 21px;
 		}
 	}
 

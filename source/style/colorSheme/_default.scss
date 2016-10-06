@@ -26,6 +26,14 @@ body{
 	}
 }
 .about-page{
+	.s-about-me{
+		&:after{
+			background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412); // #ebefe2
+		}
+		&__grid--last{
+			background-color: $colorBackground;
+		}
+	}
 	.triangle{
 		svg{
 			.left-triangle{
@@ -36,7 +44,15 @@ body{
 			}
 			
 		}
-			
+	}
+	@include apply-to($m - 1,max){
+		.triangle{
+			svg{
+				.right-triangle{
+					fill: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412); // #ebefe2
+				}
+			}
+		}
 	}
 }
 
@@ -307,6 +323,11 @@ body{
 // About
 
 .about-page{
+	.about__content{
+		.title--extra{
+			color: #566358;
+		}
+	}
 	.s-about-me{
 		&:before{
 			background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412) // #ebefe2
@@ -314,9 +335,6 @@ body{
 	}
 	.page-content{
 		color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
-	}
-	.about{
-		//background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412) // #ebefe2
 	}
 	.cover{
 		color: darken(desaturate(adjust-hue($colorMain, 25.5944), 19.8022), 11.9608); // #566358
@@ -340,13 +358,21 @@ body{
 .skill{
 	&__circle{
 		fill: lighten(desaturate(adjust-hue($colorMain, -61.6364), 13.3158), 37.2549); //#dfdcd5
-		stroke: lighten(desaturate(adjust-hue($colorMain, -4.5666), 4.0779), 14.7059); //#9ab68b
+		stroke: lighten(desaturate(adjust-hue(#6c9c5a, -0.6364), 2.4390), 3.5294); //#77a266
 	}
 	&__inner{
 		background-color: $colorBackground
 	}
 	&__text{
 		color: darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); //#4e8839
+	}
+}
+
+.skills__row{
+	&:nth-child(even){
+		.skill__circle{
+			stroke: rgba(lighten(desaturate(adjust-hue(#6c9c5a, -0.6364), 2.4390), 3.5294),.5); //#77a266
+		}
 	}
 }
 

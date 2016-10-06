@@ -23,6 +23,7 @@ $title_cover_about-say_font-size: rem(35px);
 		margin: 0 auto;
 		position: relative;
 		max-width: 435px;
+		@include trans(.6s);
 	}
 
 	.title--medium{
@@ -57,8 +58,18 @@ $title_cover_about-say_font-size: rem(35px);
 			position: absolute;	
 			z-index: -1;
 			opacity: .1;
+			@include trans(.3s);
 			transform:translate(-50%, -50%) scale(1.625);
 		}
+	}
+
+	.title-skill{
+		color: #566358;
+		font-size: 28px;
+		display: block;
+		margin-bottom: 12px;
+		@include fonts($fontMain,$f-m);
+
 	}
 
 
@@ -112,12 +123,170 @@ $title_cover_about-say_font-size: rem(35px);
 				}
 			}
 		}
+		.about__content{
+			.title--extra{
+				color: #566358;
+				font-size: rem(35px);
+			}
+		}
+		.block__skill{
+			.title--extra{
+				color: #566358;
+				font-size: rem(35px);
+				max-width: 254px;
+				top: -8px;
+				left: -23px;
+				margin-bottom: 56px;
+				&:after{
+					bottom: -27px;
+					left: -3px;
+					width: 89px;
+				}
+			}
+		}
+
+// ================== width >= 1800px ================== //
+
+@include apply-to($l,min){
+		.block__about{
+			.title-back{
+				&__svg{
+					transform:translate(-50%, -50%) scale(1.2);
+					top: 4%;
+					left: 18%;
+
+				}
+				.title--extra{
+						top: -15px;
+						left: -77px;
+						margin-bottom: 57px;
+						&:after{
+							left: 12px;
+							bottom: -20px;
+						}
+					}
+			}
+			
+		}
+		.about__content{
+			.title--extra{
+				font-size: rem(35px);
+				left: -6px;
+				margin-bottom: 54px;
+				&:after{
+					bottom: -25px;
+					left: -2px;
+				}
+			}
+		}
+}
+		
 
 			
 
 
 
+// ================== width < 1800px ================== //
 
+
+@include apply-to($l - 1,max){
+
+	.block__about{
+
+			.title-back{
+					&__svg{
+						transform:translate(-50%, -50%) scale(1.2);
+						top: 35%;
+						left: 50%;
+					}
+					.title--extra{
+						margin-bottom: 46px;
+							&:after{
+								bottom: -10px;
+							}
+					}
+			}
+	}
+	.about__content{
+		.title--extra{
+			left: -6px;
+			margin-bottom: 28px;
+			&:after{
+				bottom: -14px;
+				left: -2px;
+			}
+		}
+	}
+
+	.block__skill{
+			.title--extra{
+				top: 4px;
+				left: -21px;
+				margin-bottom: 58px;
+				&:after{
+					bottom: -20px;
+					left: -1px;
+				}
+			}
+		}
+
+}
+
+
+// ================== width < 1200 ================== //
+
+@include apply-to($m - 1,max){
+
+	.block__about{
+
+			.title-back{
+					&__svg{
+						transform:translate(-50%, -50%) scale(0.85);
+						top: 47%;
+						left: 50%;
+					}
+					.title--extra{
+						margin-bottom: 40px;
+							&:after{
+								bottom: -12px;
+								left: -6px;
+							}
+					}
+			}
+	}
+	.about__content{
+		.title--extra{
+			left: 2px;
+			margin-bottom: 29px;
+			font-size: rem(30px);
+			&:after{
+				bottom: -17px;
+				left: -2px;
+			}
+		}
+	}
+
+	.block__skill{
+			.title--extra{
+				top: 4px;
+				font-size: rem(30px);
+				left: 1px;
+				margin-bottom: 37px;
+				&:after{
+					bottom: -20px;
+					left: -1px;
+				}
+			}
+			.title-skill{
+				font-size: 21px;
+				display: block;
+				margin-bottom: 14px;
+				@include fonts($fontMain,$f-m);
+
+			}
+		}
+
+}
 
 
 
@@ -260,6 +429,65 @@ $title_cover_about-say_font-size: rem(35px);
 						width: 89px;
 					}
 				}
+			}
+		}
+
+
+
+
+
+			.block__about{
+
+				.title-back{
+						&__svg{
+							transform:translate(-50%, -50%) scale(0.62);
+							top: 35%;
+							left: 50%;
+						}
+						.title--extra{
+							margin-bottom: 34px;
+							left: 2px;
+								&:after{
+									bottom: -16px;
+									left: 0px;
+									width: 56px;
+								}
+						}
+				}
+		}
+		.about__content{
+			.title--extra{
+				font-size: rem(21px);
+				left: 2px;
+				margin-bottom: 34px;
+				&:after{
+					bottom: -17px;
+					width: 56px;
+					left: 0px;
+				}
+			}
+		}
+
+		.block__skill{
+			.title--extra{
+				top: 4px;
+				font-size: rem(21px);
+				left: 1px;
+				margin-bottom: 31px;
+				max-width: 158px;
+				line-height: 28px;
+				&:after{
+					bottom: -15px;
+					left: -1px;
+					width: 56px;
+				}
+			}
+			.title-skill{
+				font-size: 21px;
+				display: block;
+				margin-bottom: 14px;
+				@include fonts($fontMain,$f-m);
+
 			}
 		}
 

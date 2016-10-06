@@ -1,3 +1,5 @@
+// ================== 1800 width ================== //
+
 $size: 118px;
 $innerSize: 78px;
 $activeColor: #81CE97;
@@ -42,3 +44,46 @@ $bgColor: lighten($activeColor, 24%);
     font-weight: bold;
   }
 }
+
+
+// ================== width < 1800px ================== //
+
+
+@include apply-to($l - 1,max){
+
+
+  $size: 114px;
+
+  .skill{
+    width: $size;
+    height: $size;
+  }
+
+}
+
+
+// ================== width < 1200px ================== //
+
+
+@include apply-to($m - 1,max){
+
+
+  $size: 110px;
+  $innerSize: 69px;
+
+  .skill{
+    width: $size;
+    height: $size;
+  }
+
+  .skill__inner{
+  height: $innerSize;
+  width: $innerSize;
+    .skill__text {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+}
+

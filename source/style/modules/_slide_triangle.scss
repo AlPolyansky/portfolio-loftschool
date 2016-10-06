@@ -10,6 +10,7 @@ $down-click_bottom: 62px;
 	width: 100%;
 	bottom: 62px;
 	z-index: 100;
+	@include trans(.3s);
 	&__ico{
 		@include trans(.3s);
 		opacity: .7;
@@ -23,6 +24,7 @@ $down-click_bottom: 62px;
 .up-click{
 	@extend .down-click;
 	position: static;
+	@include trans(.3s);
 	margin-bottom: $up-click_gutter_bottom;
 	&__ico{
 		@extend .down-click__ico;

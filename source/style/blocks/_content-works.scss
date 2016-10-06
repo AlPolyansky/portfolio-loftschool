@@ -4,9 +4,12 @@ $background-image: "about-bg.png";
 $top-gutter: 56px;
 $top-gutter-page: 58px;
 
-.page-content{
-	padding-top: $top-gutter-page;
+.page-works{
+	.page-content{
+		padding-top: $top-gutter-page;
+	}
 }
+
 
 .s-about{
 	text-align: center;
@@ -27,9 +30,12 @@ $top-gutter-page: 38px;
 
 
 @include apply-to($s,max){
-	.page-content{
-		padding-top: $top-gutter-page;
+	.works-page{
+		.page-content{
+			padding-top: $top-gutter-page;
+		}
 	}
+	
 	.s-about{
 		padding-top: $top-gutter;
 	}
@@ -45,8 +51,10 @@ $top-gutter-page: 21px;
 
 
 @include apply-to($xs,max){
-	.page-content{
-		padding-top: $top-gutter-page;
+	.works-page{
+		.page-content{
+			padding-top: $top-gutter-page;
+		}
 	}
 	.s-about{
 		padding-top: $top-gutter;

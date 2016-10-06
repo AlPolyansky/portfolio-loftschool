@@ -14,7 +14,6 @@ body {
   margin: 0;
   @include fonts($fontMain,$f-r);
   font-size: 100%;
-  //max-width: 1800px;
   margin: 0 auto;
   position: relative;
   
@@ -37,7 +36,7 @@ label{
 }
 
 
-.blog-page{
+/* .blog-page{
 	display: table;
 	height: 100%;
 
@@ -45,7 +44,7 @@ label{
 		//display: table-row;
   		height: 100%;
 	}
-}	
+}	 */
 
 
 

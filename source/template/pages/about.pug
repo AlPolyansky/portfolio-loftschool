@@ -7,66 +7,43 @@ block content
 	.container
 		include ../modules/_sandwich
 	.wrapper.about-page
-		header.header.header_center-svg
-			.container.header__container
+		header.header.header--back-text
+			.container
 				.header__top-line
 					include ../modules/_social
 				.header__content
-					+avatar("avatar.jpg","Моё фото","Моё фото")
-					h1.total-title Александр Полянский
-					small.total-text Личный сайт веб разработчика
+					+avatar("avatar-small.png","Моё фото","Моё фото","avatar")
+					h1.title.title--medium Владимир Астахов
+					+title-back("portfolio_header")
+					small.title Личный сайт веб разработчика
 			.down-click
 				i.down-click__ico.i-arrow-down
 		.page-content
 			.triangle
 				include ../core/_svg
-			.wrap
-				section.s-about-me
-					.about
-						.container-about-me
-							h2.title.title_context Обо мне
-							.about__content
-								.about__img__wrap
-									img.about__img(src="assets/img/avatar.jpg" title="Моё фото" alt="Моё фото")
-								h3.title.about__title Кто я
-								p.about__text
-									|Я веб разработчик из Санкт-Петербурга. Мне 22 года. Я занимаюсь разработкой современных сайтов и 
-									|приложений. Родился в Архангельске, в  СПБ живу чуть больше года.  Мне нравится делать интересные и современные проекты.
-									br
-									br
-									|Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в 
-									|нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-					.skills
-						.container-about-me
-							h3.title Чем я могу быть вам полезен
+			section.s-about-me
+				.s-about-me__grid
+					.block__about
+						.title-back
+							h2.title.title--extra Обо мне
+							+title-back("about_header")
+						.about__content
+							.avatar-big
+								img.avatar-big__img(src="assets/img/avatar.jpg" title="Моё фото" alt="Моё фото")
+							h3.title.title--extra Кто я
+							p.about__text
+								|Я веб разработчик из Санкт-Петербурга. Мне 22 года. Я занимаюсь разработкой современных сайтов и 
+								|приложений. Родился в Архангельске, в  СПБ живу чуть больше года.  Мне нравится делать интересные и современные проекты.
+								br
+								br
+								|Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в 
+								|нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+				.s-about-me__grid.s-about-me__grid--last
+					.block__skill
+						.skills
+							h3.title.title--extra Чем я могу быть вам полезен
 							p.skills__description Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
-						.skills__list
-							ul.skills__row 
-								span.skills__list__title Frontend
-								li.skills__item
-									+skill("HTML5","60")
-								li.skills__item
-									+skill("CSS3","20")
-								li.skills__item
-									+skill("JavaScript & jQuery","20")
-							ul.skills__row 
-								span.skills__list__title Backend
-								li.skills__item
-									+skill("PHP","60")
-								li.skills__item
-									+skill("mySQL","20")
-								li.skills__item
-									+skill("Node.js & npm","20")
-								li.skills__item
-									+skill("Mongo.db","20")
-							ul.skills__row 
-								span.skills__list__title WorkFlow
-								li.skills__item
-									+skill("Git","60")
-								li.skills__item
-									+skill("Gulp","20")
-								li.skills__item
-									+skill("Bower","20")
+							include ../modules/_skills 
 			section.s-map
 				#map.map
 				.cover

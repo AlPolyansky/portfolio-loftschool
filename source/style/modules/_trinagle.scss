@@ -4,7 +4,7 @@ $triangle-height: 151px;
 
 .triangle{
 	position: absolute;
-	bottom: 100%;
+	bottom: calc(100% - 1px);
 	width: 100%;
 	margin: 0 auto;
 	svg{
@@ -12,6 +12,7 @@ $triangle-height: 151px;
 		bottom: 0;
 		width: 100%;
 		height: 151px;
+		@include trans(.6s);
 	}
 
 }
