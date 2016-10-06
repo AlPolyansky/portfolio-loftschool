@@ -2,6 +2,7 @@ $colorMain : #6c9c5a;
 $colorBase : #ffffff;
 $colorDark : #373e42;
 $colorBackground : #f8f9f5;
+$colorTitleBack: #93c42e;
 
 
 body{
@@ -65,15 +66,33 @@ body{
 
 // Title
 .title{
+	color: $colorBase;
+}
+
+.title--extra{
 	color: $colorDark;
 	&:after{
 		background-color: $colorDark;
 	}
 }
 
+.title-back{
+	&__svg{
+		fill: $colorTitleBack;
+	}
+}
+
+.header{
+	.title-back{
+		&__svg{
+			fill: $colorBase;
+		}
+	}
+}
+
 
 // Slider
-.s-slider{
+.slider{
 	background-color: lighten(saturate(adjust-hue($colorMain, -25.1748), 2.0596), 42.9412) // #ebefe2
 }
 

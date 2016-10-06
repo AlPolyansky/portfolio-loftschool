@@ -1,0 +1,18 @@
+.preloader{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 99999;
+	background-color: green;
+}
+
+.preloader__spinner{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	@include center();
+	@include line(#fff);
+}
+

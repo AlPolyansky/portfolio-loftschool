@@ -38,7 +38,7 @@ $cover_s-about_gutter-bottom: 59px;
 // ================== 768 width ================== //
 
 
-$cover_s-about_gutter-bottom: 43px;
+$cover_s-about_gutter-bottom: 42px;
 $cover_width : 350px;
 
 
@@ -47,6 +47,7 @@ $cover_width : 350px;
 		width: $cover_width;
 	}
 	.cover_s-about{
+		padding-top: 24px;
 		margin-bottom: $cover_s-about_gutter-bottom;
 	}
 }

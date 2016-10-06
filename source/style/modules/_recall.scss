@@ -84,8 +84,8 @@ $recall__gutter-bottom: -10px;
 
 $recall__item_max-width: 100%;
 $recall__gutter-bottom: 3px;
-$recall__item_gutter-bottom: 18px;
 $recall__item_gutter-side: 7px;
+$recall__item_gutter-bottom: 15px;
 
 @include apply-to($xs,max){
 	.recall{

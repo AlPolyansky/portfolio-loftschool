@@ -35,3 +35,12 @@ mixin skill(skillName,percent)
 			circle.skill__circle(r='16', cx='16', cy='16')
 		.skill__inner
 			span.skill__text= skillName
+
+//- svg
+
+mixin title-back(imgName,className)
+	-var defaultClassName = "title-back__svg"
+	-if(className === undefined)
+		- className = defaultClassName
+	svg(class=className)
+		use(xlink:href="assets/img/sprite.svg#" + imgName)

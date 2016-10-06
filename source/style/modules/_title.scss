@@ -1,163 +1,268 @@
 // ================== 1800 width ================== //
 
-$title_font-size: rem(63px);
+
+$title--medium_font-size: rem(35px);
+
+$title--extra_font-size: rem(63px);
+$title--extra_after-width: 89px;
+$title--extra_after-height: 3px;
+
+
+
 $title_cover_about-say_font-size: rem(35px);
-$title_cover_about-say_margin-bottom: 30px;
-
-$title--context_before_width: 116%;
-$title--context_before_height: 178%;
 
 
-.title{
-	text-align: center;
-	font-size: $title_font-size;
-	max-width: 435px;
-	margin: 0 auto;
-	text-transform: uppercase;
-	position: relative;
-	display: block;
-	z-index: 100;
-	@include fonts($fontExtra,$f-r);
-	&:after{
-		content: "";
+
+
+	// ======= modifiers ======= //
+
+	.title{
+		font-size: 1rem;
+		text-align: center;
 		display: block;
-		height: 3px;
-		width: 89px;
 		margin: 0 auto;
-		margin-top: 18px;
+		position: relative;
+		max-width: 435px;
 	}
-	
-}
 
-.title--context{
-	&:before{
-		content: "";
-		display: block;
-		position: absolute;
-		background-size: contain;
-		background-position: center center;
-		background-repeat: no-repeat;
-		width: $title--context_before_width;
-		height: $title--context_before_height;
-		opacity: .1;
-		z-index: -1;
-		top: 25%;
-		left: 52%;
-		transform: translate(-50%, -50%);
+	.title--medium{
+		font-size: $title--medium_font-size;
+		@include fonts($fontMain,$f-m);
+		
 	}
-}
 
-.title--my-works{
-	margin-top: 0px;
-	margin-bottom: 33px;
-	&:before{
-		@include img($image + "works.png");
-	}
-}
+	.title--extra{
+			@include fonts($fontExtra,$f-r);
+			text-transform: uppercase;
+			font-size: $title--extra_font-size;
+			&:after{
+				content: "";
+				display: block;
+				height: $title--extra_after-height;
+				width: $title--extra_after-width;
+				margin: 0 auto;
+				bottom: -23px;
+				position: absolute;
+				right: 0;
+				left: 0;
+			}
+		}
 
-.title--about-say{
-	margin-bottom: 33px;
-	&:before{
-		@include img($image + "about.png");
-		top: 31%;
+	.title-back{
+		position: relative;
+		z-index: 10;
+		&__svg{
+			left: 50%;
+			top: 50%;
+			position: absolute;	
+			z-index: -1;
+			opacity: .1;
+			transform:translate(-50%, -50%) scale(1.625);
+		}
 	}
-	&:after{
-		margin-top: 23px;
-	}
-}
 
-.title--cover_about-say{
-	font-size: $title_cover_about-say_font-size;
-	margin-bottom: $title_cover_about-say_margin-bottom;
-	&:after{
-		margin-top: 23px;
-	}
-}
+
+	// ======= Common ======= //
+
+		.header{
+			.title{
+				margin-bottom: 8px;
+			}
+			.title-back{
+				&__svg{
+					transform:translate(-50%, -50%) scale(3.8);
+					top: 42%;
+					opacity: .12;
+				}
+			}
+		}
+
+		.s-works{
+				.title--extra{
+					margin-bottom: 54px;
+				}
+				.title-back{
+					&__svg{
+						transform:translate(-50%, -50%) scale(1.67);
+						top: 37%;
+					}
+				}
+			}
+
+		.s-about{
+			.title--extra{
+				margin-bottom: 57px;
+				&:after{
+					bottom: -27px;
+				}
+			}
+			.title-back{
+				&__svg{
+					transform:translate(-50%, -50%) scale(1.6);
+					top: 46%;
+				}
+			}
+			.cover{
+				.title{
+					font-size: $title_cover_about-say_font-size;
+					margin-bottom: 57px;
+					&:after{
+						bottom: -24px;
+					}
+				}
+			}
+		}
+
+			
+
+
+
+
 
 
 
 // ================== 768 width ================== //
 
 
-$title_font-size: rem(49px);
-$title_after_gutter-top: 4px;
-
-$title--context_before_width: 103%;
-$title--context_before_height: 122%;
-$title--context_before_top: 49px;
-
-$title--cover_about-say_font-size: rem(35px);
-$title--cover_about-say_gutter-top: 22px;
-
-
 @include apply-to($s,max){
 
-	.title{
-		font-size: $title_font-size;
+	$title--extra_font-size: rem(49px);
+
+	// ======= modifiers ======= //
+
+	.title--extra{
+		font-size: $title--extra_font-size;
 		&:after{
-			content: "";
-			display: block;
-			height: 3px;
-			width: 89px;
-			margin: 0 auto;
-			margin-top: $title_after_gutter-top;
-		}
-	}
-	.title--cover_about-say{
-		font-size: $title--cover_about-say_font-size;
-		&:after{
-			margin-top: $title--cover_about-say_gutter-top;
-		}
-	}
-	.title--context{
-		&:before{
-			top: $title--context_before_top;
-			width: $title--context_before_width;
-			height: $title--context_before_height;
+			bottom: -13px;
+			left: -20px;
 		}
 	}
 
+	// ======= Common ======= //
+
+	.header{
+		.title-back{
+			&__svg{
+				transform:translate(-50%, -50%) scale(2.4);
+				top: 42%;
+				opacity: .12;
+			}
+		}
+	}
+
+	.s-works{
+		.title--extra{
+			margin-bottom: 41px;
+		}
+		.title-back{
+			&__svg{
+				transform:translate(-50%, -50%) scale(1.38);
+				top: 37%;
+			}
+		}
+	}
+
+	.s-about{
+		.title--extra{
+			margin-bottom: 42px;
+			&:after{
+				bottom: -6px;
+				left: 0;
+			}
+		}
+		.title-back{
+			&__svg{
+				transform:translate(-50%, -50%) scale(1.6);
+				top: 46%;
+			}
+		}
+		.cover{
+			.title{
+				font-size: $title_cover_about-say_font-size;
+				margin-bottom: 57px;
+				&:after{
+					bottom: -26px;
+				}
+			}
+		}
+	}
 
 }
+
+
+
+
 
 
 
 // ================== 480 width ================== //
 
-$title_cover_about-say_font-size: rem(20px);
-$title_cover_about-say_margin-bottom: 21px;
-$title_cover_about-say_after_gutter: 13px;
-
-$title--context__font-size: rem(35px);
-$title--context__gutter-bottom: 22px;
-$title--context_after_gutter-top: 22px;
-$title--context_after_width: 19%;
-$title--context_before_width: 100%;
-$title--context_before_height: 88%;
-$title--context_before_top: 35px;
-
 
 @include apply-to($xs,max){
-	
-	.title--context{
-		font-size: $title--context__font-size;
-		margin-bottom: $title--context__gutter-bottom;
-		&:after{
-			margin-top: $title--context_after_gutter-top;
-			width: $title--context_after_width;
+
+	// ======= modifiers ======= //
+		.title{
+			font-size: (14px);
 		}
-		&:before{
-			top: $title--context_before_top;
-			width: $title--context_before_width;
-			height: $title--context_before_height;
+		.title--medium{
+			font-size: (21px);
 		}
-	}
-	.title--cover_about-say{
-		font-size: $title_cover_about-say_font-size;
-		margin-bottom: $title_cover_about-say_margin-bottom;
-		&:after{
-			margin-top: $title_cover_about-say_after_gutter;
+		.title--extra{
+			font-size: 35px;
 		}
-	}
+
+		// ======= Common ======= //
+
+		.header{
+			.title-back{
+				&__svg{
+					display: none;
+				}
+			}
+		}
+		.s-works{
+			.title--extra{
+				margin-bottom: 33px;
+				&:after{
+					bottom: -16px;
+					width: 55px;
+					left: -2px;
+				}
+			}
+			.title-back{
+				&__svg{
+					transform:translate(-50%, -50%) scale(0.8);
+					top: 37%;
+				}
+			}
+		}
+		.s-about{
+			.title--extra{
+				margin-bottom: 49px;
+				&:after{
+					bottom: -27px;
+					left: 0;
+					width: 55px;
+				}
+			}
+			.title-back{
+				&__svg{
+					transform:translate(-50%, -50%) scale(0.81);
+					top: 46%;
+				}
+			}
+			.cover{
+				.title--extra{
+					font-size: rem(21px);
+					margin-bottom: 41px;
+					&:after{
+						bottom: -18px;
+						width: 89px;
+					}
+				}
+			}
+		}
 
 }
+
+

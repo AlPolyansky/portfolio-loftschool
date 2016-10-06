@@ -1,24 +1,41 @@
 // ================== 1800 width ================== //
 
-$avatar_size: 60px;
+$avatar--header_size: 140px;
 $avatar--recal_size: 77px;
 
-.avatar{
-	@include radius();
-	height: $avatar_size;
-	width: $avatar_size;
-	position: relative;
-	&__img{
-		width: 100%;
-	}
-}
 
-.avatar--recall{
-	height: $avatar--recal_size;
-	width: $avatar--recal_size;
-	margin: 0 auto;
-	margin-bottom: 18px;
-}
+	// ======= modifiers ======= //
+
+	.avatar{
+		@include radius();
+		position: relative;
+		margin: 0 auto;
+		&__img{
+			width: 100%;
+		}
+	}
+
+
+
+	// ======= Common ======= //
+	
+	.header{
+		.avatar{
+			height: $avatar--header_size;
+			width: $avatar--header_size;
+			margin-bottom: 24px;
+		}
+	}
+	.recall{
+		.avatar{
+			height: $avatar--recal_size;
+			width: $avatar--recal_size;
+			margin-bottom: 19px;
+		}
+	}
+
+
+
 
 
 // ================== 768 width ================== //
@@ -29,10 +46,14 @@ $avatar--recal_size: 77px;
 
 
 @include apply-to($s,max){
-	.avatar--recall{
-		height: $avatar--recal_size;
-		width: $avatar--recal_size;
+
+	.recall{
+		.avatar{
+			height: $avatar--recal_size;
+			width: $avatar--recal_size;
+		}
 	}
+	
 }
 
 // ================== 480 width ================== //
@@ -42,9 +63,19 @@ $avatar--recal_size: 51px;
 
 
 
-@include apply-to($s,max){
-	.avatar--recall{
-		height: $avatar--recal_size;
-		width: $avatar--recal_size;
+@include apply-to($xs,max){
+
+	.recall{
+		.avatar{
+			height: $avatar--recal_size;
+			width: $avatar--recal_size;
+		}
 	}
+
+	.header{
+		.avatar{
+			margin-bottom: 29px;
+		}
+	}
+
 }

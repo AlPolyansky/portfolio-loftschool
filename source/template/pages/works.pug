@@ -8,30 +8,33 @@ block content
   .container
       include ../modules/_sandwich
   .wrapper.works-page
-    header.header.header_center-svg
-      .container.header__container
+    header.header.header--back-text
+      .container
         .header__top-line
           include ../modules/_social
         .header__content
-          +avatar("avatar-small.png","Моё фото","Моё фото")
-          h1.total-title Александр Полянский
-          small.total-text Личный сайт веб разработчика
+          +avatar("avatar-small.png","Моё фото","Моё фото","avatar")
+          h1.title.title--medium Владимир Астахов
+          +title-back("portfolio_header")
+          small.title Личный сайт веб разработчика
       .down-click
         i.down-click__ico.i-arrow-down
     .page-content
       .triangle
         include ../core/_svg
       section.s-works
-        .container
-          h2.title.title--context.title--my-works Мои работы
-      section.s-slider
-        include ../modules/_slider
+          .title-back
+            h2.title.title--extra Мои работы
+            +title-back("works_header")
+          include ../modules/_slider
       section.s-about
         .container
-          h2.title.title--context.title--about-say Что обо мне говорят
+          .title-back
+            h2.title.title--extra Что обо мне говорят
+            +title-back("about_header")
           include ../modules/_recall
           .cover.cover_s-about
-            .title.title--cover_about-say Связаться со мной
+            .title.title--extra Связаться со мной
             form(method="",action="#").form.form_about-say
               .form__item
                 input(type='text' name='name' placeholder='Имя').form__input

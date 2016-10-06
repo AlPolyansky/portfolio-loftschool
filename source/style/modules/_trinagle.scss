@@ -1,14 +1,67 @@
+// ================== 1800 width ================== //
+
+$triangle-height: 151px;
+
 .triangle{
 	position: absolute;
 	bottom: 100%;
-	//height: 300px;
 	width: 100%;
 	margin: 0 auto;
 	svg{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 210px;
+		height: 151px;
+	}
+
+}
+
+// ================== 1200 width ================== //
+
+
+$triangle-height: 102px;
+
+
+@include apply-to($m,max){
+
+	.triangle{
+		svg{
+			height: $triangle-height;
+		}
+	}
+
+}
+
+
+// ================== 768 width ================== //
+
+
+$triangle-height: 67px;
+
+
+@include apply-to($s,max){
+
+	.triangle{
+		svg{
+			height: $triangle-height;
+		}
+	}
+
+}
+
+
+// ================== 480 width ================== //
+
+
+$triangle-height: 27px;
+
+
+@include apply-to($xs,max){
+
+	.triangle{
+		svg{
+			height: $triangle-height;
+		}
 	}
 
 }

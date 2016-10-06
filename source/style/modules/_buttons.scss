@@ -21,3 +21,16 @@
 	}
 }
 
+.buttons--pages{
+	display: table;
+	.buttons__item{
+		display: table-cell;
+		@include line();
+		padding: 0px 30px;
+		vertical-align: middle;
+	}
+	.buttons__link{
+		
+	}
+}
+

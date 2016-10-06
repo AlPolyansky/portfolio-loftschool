@@ -9,7 +9,7 @@ var startModule = (function(){
     var $upClick = $(".up-click__ico");
     var $wrapper = $(".wrapper");
     var $menu = $(".nav");
-    var $sAbout = $(".s-about");
+    var $sWorks = $(".s-works");
     var $sandwich = $(".sandwich");
     var $submit = $("[type = submit]");
     var scrollSpeed = 700;
@@ -65,6 +65,9 @@ var startModule = (function(){
 
         });
     }
+
+
+
 
     var validForm = function(thisElem){
         var pattern = /^([0-9a-zA-Z_-]+\.)*[0-9a-zA-Z_-]+@[0-9a-zA-Z_-]+(\.[0-9a-zA-Z_-]+)*\.[a-z]{2,6}$/;
@@ -138,7 +141,7 @@ var startModule = (function(){
 
     var _setUpListner = function(){
         $downClickToContent.on("click",function(){scrollTo($content,scrollSpeed)});
-        $downClickToForm.on("click",function(){scrollTo($sAbout,scrollSpeed)});
+        $downClickToForm.on("click",function(){scrollTo($sWorks,scrollSpeed)});
         $upClick.on("click",function(){scrollTo($("body"),scrollSpeed)});
         $sandwich.on("click",function(){
             $(this).toggleClass("sandwich_on");

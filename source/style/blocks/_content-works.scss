@@ -2,7 +2,11 @@
 
 $background-image: "about-bg.png";
 $top-gutter: 56px;
+$top-gutter-page: 58px;
 
+.page-content{
+	padding-top: $top-gutter-page;
+}
 
 .s-about{
 	text-align: center;
@@ -19,9 +23,13 @@ $top-gutter: 56px;
 
 
 $top-gutter: 36px;
+$top-gutter-page: 38px;
 
 
 @include apply-to($s,max){
+	.page-content{
+		padding-top: $top-gutter-page;
+	}
 	.s-about{
 		padding-top: $top-gutter;
 	}
@@ -33,9 +41,13 @@ $top-gutter: 36px;
 
 
 $top-gutter: 29px;
+$top-gutter-page: 21px;
 
 
 @include apply-to($xs,max){
+	.page-content{
+		padding-top: $top-gutter-page;
+	}
 	.s-about{
 		padding-top: $top-gutter;
 	}
