@@ -13,17 +13,17 @@ block content
 					h1.total-title Александр Полянский
 					small.total-text Личный сайт веб разработчика
 					include ../modules/_social
-					.buttons.buttons--pages
-						.buttons__item
-							a(href="works.html" title="Мои работы").buttons__link Мои работы
-						.buttons__item
-							a(href="about.html" title="Обо мне").buttons__link Обо мне
-						.buttons__item
-							a(href="blog.html" title="Блог").buttons__link Блог
+					.buttons
+						.button__wrap
+							a(href="works.html" title="Мои работы").button__item Мои работы
+						.button__wrap
+							a(href="about.html" title="Обо мне").button__item Обо мне
+						.button__wrap
+							a(href="blog.html" title="Блог").button__item Блог
 			.cover__back
-				.cover__content.cover__content__form
-					h2.title Авторизуйтесь
-					form(method="POST",action="").form
+				.cover__content
+					h2.title.title--extra Авторизуйтесь
+					form(method="POST",action="").form-home
 						.input__container
 							.input-wrap.input-text
 								input(type='text' name='name' placeholder='Логин' id="form-name" autocomplete='off').form__item
@@ -44,10 +44,12 @@ block content
 								.form__item__wrap
 									input(name='radio' type='radio' id="form-radio-no").form__item.form__item_radio
 									label(for='form-radio-no').input-wrap__text Не уверен
-						.cover-button__wrap
+						.buttons
 							.button__wrap
-								a(href="#").cover-button На главную 
+								a(href="#").button__item
+									span.buttons__text На главную
 							.button__wrap
-								button(type="submit").cover-button Войти
+								button(type="reset").button__item
+									span.buttons__text Войти
 		.copyright.
 			© Полянский Александр | создано с любовью в LoftSchool | 2016

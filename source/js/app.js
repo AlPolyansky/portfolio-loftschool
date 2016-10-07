@@ -188,7 +188,7 @@ $( document ).ready(function() {
 		$(".home-page .cover").addClass("flip");
 	})
 
-	$(".cover__content__form a").on("click",function(){
+	$(".cover__back a").on("click",function(){
 		$entery.removeClass("hide");
 		$(".home-page .cover").removeClass("flip");
 	})

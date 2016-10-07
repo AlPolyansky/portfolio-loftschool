@@ -72,19 +72,31 @@ $title_cover_about-say_font-size: rem(35px);
 
 	}
 
+	.title-back--header{
+			&__svg{
+				width: 100%;
+				fill: #fff;
+				opacity: .12;
+				height: 101%;
+				@include center();
+				top: 42%;
+			}
+		}
+
 
 	// ======= Common ======= //
+
+		.cover__back{
+			.title{
+				font-size: 35px;
+				margin-top: 45px;
+				margin-bottom: 55px;
+			}
+		}
 
 		.header{
 			.title{
 				margin-bottom: 8px;
-			}
-			.title-back{
-				&__svg{
-					transform:translate(-50%, -50%) scale(3.8);
-					top: 42%;
-					opacity: .12;
-				}
 			}
 		}
 
@@ -359,6 +371,18 @@ $title_cover_about-say_font-size: rem(35px);
 
 	// ======= Common ======= //
 
+	.cover__back{
+			.title{
+				font-size: 35px;
+				margin-top: 45px;
+				margin-bottom: 55px;
+				&:after{
+					left: 0;
+					bottom: -23px;
+				}
+			}
+		}
+
 	.header{
 		.title-back{
 			&__svg{
@@ -458,12 +482,22 @@ $title_cover_about-say_font-size: rem(35px);
 
 		// ======= Common ======= //
 
-		.header{
-			.title-back{
-				&__svg{
-					display: none;
+		.cover__back{
+			.title{
+				font-size: 35px;
+				margin-top: 35px;
+				margin-bottom: 55px;
+				font-size: 30px;
+				&:after{
+					left: 0;
+					bottom: -23px;
 				}
 			}
+		}
+
+
+		.title-back--header{
+			display: none;
 		}
 		.s-works{
 			.title--extra{

@@ -31,6 +31,14 @@ $cover-s-about_gutter-top: 28px;
 		padding-top: 28px;
 }
 
+.home-page{
+	.cover{
+		overflow: visible;
+		perspective: 800px;
+		@include center();
+	}
+}
+
 
 // ================== 1200 width ================== //
 

@@ -15,52 +15,7 @@ $animateView : 800px;
 		min-height: 580px;
 	}
 	text-align: center;
-	.cover{
-		text-align: center;
-		@include center();
-		perspective: $animateView;
-		top: 45%;
-		@include trans(.2s);
-		@include apply-to($s,max){
-			width: 348px;
-		}
-		@include apply-to($xs,max){
-			width: 300px;
-			position: static;
-			//@include center();
-			top: 55%;
-			transform: none;
-			margin-bottom: 40px;
-		}
-		.button__wrap{
-			@include apply-to($xs,max){
-				&:nth-child(1){
-				}
-				&:nth-child(2){
-					width: 32%;
-				}
-				&:nth-child(3){
-				}
-			}
-			
-			
-		}
-		.cover-button{
-			display: block;
-			height: auto;
-			text-decoration: none;
-			padding: 15px 30px;
-			width: 100%;
-			@include apply-to($s,max){
-				padding: 15px 24px;
-			}
-			@include apply-to($xs,max){
-				padding: 16px 0px;
-				font-size: 14px;
-				width: 90%;
-			}
-		}
-	}
+	
 	.cover__content__info{
 
 		.avatar{
@@ -96,13 +51,9 @@ $animateView : 800px;
 			}
 		}
 	}
-	.cover__content__form{
+/* 	.cover__content__form{
 		-moz-user-select: none;
 		-webkit-user-select: none;
-		.button__wrap{
-			width: 50%;
-			float: left;
-		}
 		.input__container{
 			padding-left: 20px;
 			padding-right: 20px;
@@ -245,7 +196,7 @@ $animateView : 800px;
 
 			}
 		}
-	}
+	} */
 	
 	
 	.hide{
