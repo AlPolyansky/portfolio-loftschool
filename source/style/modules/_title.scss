@@ -80,6 +80,7 @@ $title_cover_about-say_font-size: rem(35px);
 				height: 101%;
 				@include center();
 				top: 42%;
+				z-index: -1;
 			}
 		}
 
