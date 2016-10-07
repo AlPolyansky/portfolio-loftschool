@@ -1,20 +1,7 @@
+// ================== 1800 width ================== //
 .sidebar{
 	margin-bottom: 7px;
-	//min-width: 294px;
 	text-align: right;
-	@include col(3);
-	left: -209px;
-	position: absolute;
-	@include apply-to(1799px,max){
-		left: 0;
-	}
-	//left: -100px;
-	//@include col(1);
-	//display: inline-block;
-	//left: 66px;
-	//display: none;
-
-
 	&__item{
 			padding-top: 13px;
 			padding-bottom: 7px;
@@ -31,5 +18,36 @@
 		display: inline-block;
 		line-height: 23px;
 		max-width: 247px;
+	}
+}
+
+
+
+// ================== 1200 width ================== //
+@include apply-to($m,max){
+	.sidebar{
+		&__item{
+			padding-top: 11px;
+		}
+	}
+}
+
+
+
+
+// ================== 768 width ================== //
+@include apply-to($s,max){
+	.sidebar{
+		display: none;
+		z-index: 200;
+		top: 0;
+	}
+}
+
+
+// ================== 480 width ================== //
+@include apply-to($xs,max){
+	.sidebar{
+		display: none;
 	}
 }

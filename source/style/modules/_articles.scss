@@ -1,12 +1,6 @@
+// ================== 1800 width ================== //
 .article{
-	width: 100%;
 	position: relative;
-	@include col(9);
-	@include apply-to(1799px,max){
-		@include col(8);
-		@include pull(2);
-	}
-	margin-left: 207px;
 	&__item{
 		padding-bottom: 65px;
 		margin-bottom: 77px;
@@ -47,4 +41,71 @@
 			max-width: 883px;
 		}
 	}
+	code{
+		width: 100%;
+	}
+}
+
+
+
+
+// ================== 1200 width ================== //
+@include apply-to($m,max){
+
+	.article{
+		&__date{
+			position: relative;
+			top: -4px;
+			left: 2px;
+		}
+	}
+
+
+}
+
+
+// ================== 768 width ================== //
+@include apply-to($s,max){
+
+	.article{
+		&__title{
+			font-size: rem(30px);
+			margin-bottom: 8px;
+			color: #566358;
+		}
+		&__date{
+			margin-bottom: 0;
+		}
+		&__content{
+			position: relative;
+			top: -5px;
+			line-height: 22px;
+			font-size: rem(14px);
+		}
+	}
+
+
+}
+
+// ================== 480 width ================== //
+@include apply-to($xs,max){
+
+	.article{
+		&__title{
+			font-size: rem(21px);
+		}
+		&__date{
+			margin-bottom: 0;
+			top: -2px;
+			left: 0px;
+		}
+		&__content{
+			position: relative;
+			top: -5px;
+			line-height: 22px;
+			font-size: rem(14px);
+		}
+	}
+
+
 }

@@ -1,24 +1,92 @@
-.blog-page{
-		.container{
-			@include clear();
-		}
+// ================== 1800 width ================== //
 
-		.page-content__container{
-			overflow: hidden;
-		}
-
-		.content-wrap{
-			max-width: 1200px;
-			width: 100%;
-			@include clear();
-			margin: 0 auto;
-			position: relative;
-		}
-	}
-
-.blog-page{
-	.sidebar{
-		&__list{
-		}
-	}
+.blog-content{
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 70px;
+	position: relative;
 }
+ .container-blog{
+
+ 		.sidebar{
+			float: left;
+			width: 293px;
+		}
+}
+ 		.article{
+			margin-left: 293px;
+			padding-left: 7%;
+ 		}
+ 
+
+
+// ================== 1200 width ================== //
+ @include apply-to($m,max){
+
+  .container-blog{
+
+ 		.sidebar{
+			float: left;
+			width: 309px;
+		}
+
+		.article{
+			margin-left: 293px;
+			padding-left: 9.5%;
+ 		}
+
+	}
+
+ }
+
+
+
+// ================== 768 width ================== //
+ @include apply-to($s,max){
+
+
+	.blog-content{
+		max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 54px;
+		position: relative;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+  .container-blog{
+
+		.article{
+			margin-left: 0;
+			width: 100%;
+			padding-left: 0;
+ 		}
+
+	}
+
+ }
+
+// ================== 768 width ================== //
+ @include apply-to($xs,max){
+
+
+	.blog-content{
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+ }
+
+
+
+// ================== 768 width ================== //
+ @include apply-to($xs,max){
+
+
+	.blog-content{
+		padding-top: 39px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+ }

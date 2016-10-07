@@ -1,4 +1,4 @@
-*{
+*,*:after,*:before{
 	box-sizing: border-box;
 }
 html{
@@ -6,12 +6,11 @@ html{
 	font-size: 16px;
 }
 html,body{
-	
+	margin: 0; 
 	height: 100%;
 }
 
 body {
-  margin: 0;
   @include fonts($fontMain,$f-r);
   font-size: 100%;
   margin: 0 auto;
