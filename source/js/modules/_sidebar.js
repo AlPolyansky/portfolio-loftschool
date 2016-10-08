@@ -39,7 +39,9 @@ var sidebarModule = (function() {
   			var attr = $(this).data("id");
   			$thisArticle = $("article[data-id="+ $(this).data("id") +"]");
   			$('body,html').animate({scrollTop: $thisArticle.offset().top - gutter}, speed);
-
+  			if($sidebar.hasClass(fixed)){
+  				$sidebar.removeClass(open);
+  			}
   		})
   	}
 

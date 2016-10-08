@@ -270,7 +270,7 @@ body{
 		color: lighten(desaturate(adjust-hue($colorDark, -8.4848), 0.8340), 54.9020); // #c4cbcd
 	}
 }
-.input-wrap__text{
+.form__item__text{
 	&:before{
 		background-color: $colorMain;
 		color: $colorBase;

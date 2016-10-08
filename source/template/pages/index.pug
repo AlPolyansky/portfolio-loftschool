@@ -23,33 +23,32 @@ block content
 			.cover__back
 				.cover__content
 					h2.title.title--extra Авторизуйтесь
-					form(method="POST",action="").form-home
+					form.form.form-home(method="POST",action="")
 						.input__container
-							.input-wrap.input-text
-								input(type='text' name='name' placeholder='Логин' id="form-name" autocomplete='off').form__item
+							.form__item
+								input(type='text' name='name' placeholder='Логин' id="form-name" autocomplete='off').form__input
 								label(for='form-name').ico__wrap
 									i.i-user.input__ico
-							.input-wrap.input-text
-								input(name='password' type='password' placeholder="Пароль" id="form-pass" autocomplete='off').form__item
+							.form__item
+								input(name='password' type='password' placeholder="Пароль" id="form-pass" autocomplete='off').form__input
 								label(for='form-pass').ico__wrap
 									i.i-key.input__ico
-							.input-wrap.input-wrap_checkbox
-								input(name='checkbox' type='checkbox' id="form-checkbox").form__item.form__item_checkbox
-								label(for='form-checkbox').input-wrap__text Я человек
-							.input-wrap.input-wrap_radio
-								span.input-wrap__title Вы точно не робот?
-								.form__item__wrap
-									input(name='radio' type='radio' id="form-radio-yes").form__item.form__item_radio
-									label(for='form-radio-yes').input-wrap__text Да
-								.form__item__wrap
-									input(name='radio' type='radio' id="form-radio-no").form__item.form__item_radio
-									label(for='form-radio-no').input-wrap__text Не уверен
+							.form__check
+								input(name='checkbox' type='checkbox' id="form-checkbox").form__input.form__checkbox
+								label(for='form-checkbox').form__item__text Я человек
+							span.form__title Вы точно не робот?
+							.form__radio
+								input(name='radio' type='radio' id="form-radio-yes").form__input
+								label(for='form-radio-yes').form__radio__text Да
+							.form__radio
+								input(name='radio' type='radio' id="form-radio-no").form__input
+								label(for='form-radio-no').form__radio__text Не уверен
 						.buttons
 							.button__wrap
 								a(href="#").button__item
 									span.buttons__text На главную
 							.button__wrap
-								button(type="reset").button__item
+								button(type="submit").button__item
 									span.buttons__text Войти
 		.copyright.
 			© Полянский Александр | создано с любовью в LoftSchool | 2016

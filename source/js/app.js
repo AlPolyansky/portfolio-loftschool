@@ -171,6 +171,7 @@ $( document ).ready(function() {
     commonModule.init();
     menuModule.init();
     sidebarModule.init();
+    formModule.init();
 })
 
 
