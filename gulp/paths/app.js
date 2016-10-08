@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = [
-  './source/js/app.js'
+'./source/js/modules/_base.js',
+ './source/js/modules/_common.js',
+ './source/js/modules/_menu.js',
+ './source/js/modules/_sidebar.js',
+ './source/js/modules/_blog.js',
+ './source/js/app.js'
 ];

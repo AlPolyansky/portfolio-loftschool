@@ -2,6 +2,7 @@
 .sidebar{
 	margin-bottom: 7px;
 	text-align: right;
+	transition: margin-left .3s;
 	&__item{
 			padding-top: 13px;
 			padding-bottom: 7px;
@@ -19,7 +20,23 @@
 		line-height: 23px;
 		max-width: 247px;
 	}
+	&__button{
+		position: fixed;
+		top: 50%;
+		width: 8px;
+		height: 40px;
+		border-radius: 0 100% 100% 0 / 50%;
+		visibility: hidden;
+		z-index: 1000;
+	}
 }
+
+
+.sidebar--fixed{
+	position: fixed;
+	top: 0;
+}
+
 
 
 
@@ -38,16 +55,34 @@
 // ================== 768 width ================== //
 @include apply-to($s,max){
 	.sidebar{
-		display: none;
-		z-index: 200;
+		position: fixed;
+		z-index: 1000;
 		top: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		height: 100vh;
+		padding-left: 20px;
+		right: 0;
+		box-shadow: 3px 0px 17px rgba(0,0,0,0.30);
+		margin-left: -309px;
+		&__list{
+			max-width: 263px;
+			position: absolute;
+			top: 30%;
+		}
+		&__button{
+		visibility: visible;
+		box-shadow: 3px 0px 0px -3 rgba(0,0,0,0.40);
+		}
+	}
+	.sidebar--open{
+		margin-left: 0px;
 	}
 }
 
 
 // ================== 480 width ================== //
 @include apply-to($xs,max){
-	.sidebar{
-		display: none;
-	}
+
 }

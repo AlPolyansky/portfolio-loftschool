@@ -317,6 +317,9 @@ body{
 		}
 		border-right: 3px solid darken(saturate(adjust-hue($colorMain, 0.4143), 14.1034), 10.3922); // #4e8839;
 	}
+	&__button{
+		background-color: $colorMain;
+	}
 }
 
 .article{
@@ -327,6 +330,23 @@ body{
 	&__item{
 		&:after{
 			background-color: lighten(saturate(adjust-hue($colorDark, -149.3182), 8.3004), 67.2549); // #ecebe4
+		}
+	}
+
+}
+
+
+@include apply-to($s,max){
+	.sidebar{
+		background-color: $colorMain;
+		&__link{
+		color: rgba($colorBase,.7);
+		}
+		&__item_active{
+			.sidebar__link{
+				color: $colorBase;
+			}
+			border-right: none;
 		}
 	}
 }

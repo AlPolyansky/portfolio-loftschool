@@ -2,41 +2,18 @@
 var startModule = (function(){
     // Переменные
 
-    var $content = $(".page-content");
-    var $downClick = $(".down-click__ico");
-    var $downClickToContent = $(".wrapper:not(.works-page)").find($downClick);
-    var $downClickToForm = $(".works-page").find($downClick);
-    var $upClick = $(".up-click__ico");
-    var $wrapper = $(".wrapper");
+    var base = new BaseModule;
+
     var $menu = $(".nav");
     var $sWorks = $(".s-works");
     var $sandwich = $(".sandwich");
     var $submit = $("[type = submit]");
-    var scrollSpeed = 700;
 
 
 
-    // Служеные функции
 
-    var log = function(elem){
-        return console.log(elem);
-    }
 
-    var getPositionTop = function(elem){
-        return $(elem).offset().top;
-    }
 
-    var getPositionLeft = function(elem){
-        return $(elem).offset().left;
-    }
-
-    var scrollTo = function(elem,speed){
-        return $('body,html').animate({scrollTop: getPositionTop(elem)}, speed);
-    }
-    
-    var cloneInsert = function(parent,element){
-        return element.clone(true).prependTo(parent);
-    }
 
 
     // Функции модуля
@@ -130,24 +107,38 @@ var startModule = (function(){
 
     }
 
-    var _addPopUpMenu = function(){
-        return cloneInsert($("body"),$menu).wrapAll('<div class="popUpMenu"></div>').addClass("popUpMenu__inner");
+
+
+
+
+    // FIXED//
+    $(document).mouseup(function (e) {
+        var container = $(".sidebar");
+        if (container.has(e.target).length === 0){
+            container.removeClass("sidebar--open");
+        }
+    });
+    // FIXED//
+
+
+
+    var getPage = function(){
+        if(location.href.match(/blog/)) {
+            //alert(12)
+        }
 
     }
-
-
 
     // Прослушка
 
     var _setUpListner = function(){
-        $downClickToContent.on("click",function(){scrollTo($content,scrollSpeed)});
-        $downClickToForm.on("click",function(){scrollTo($sWorks,scrollSpeed)});
-        $upClick.on("click",function(){scrollTo($("body"),scrollSpeed)});
-        $sandwich.on("click",function(){
-            $(this).toggleClass("sandwich_on");
-            $("body").toggleClass("no-scroll");
-            $(".popUpMenu").toggleClass("popUpMenu_show");
-        })
+       
+        /*if(location.href.match(/blog/)) {
+            $(document).on("scroll",function(){
+                console.log(12);
+            })
+        }*/
+        //console.log(getPage("blog"));
         /*$("[type = submit]").on("click",function(e){
             e.preventDefault();
             var $this = $(this);
@@ -163,8 +154,9 @@ var startModule = (function(){
     return {
         init: function(){
             // происходит сразу
-            _addPopUpMenu();
-            _setUpListner();
+            //_addPopUpMenu();
+            //_setUpListner();
+            //test();
             
             
         }
@@ -172,13 +164,33 @@ var startModule = (function(){
 
 })();
 
+
+
+
 $( document ).ready(function() {
-    startModule.init();
+    commonModule.init();
+    menuModule.init();
+    sidebarModule.init();
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $( document ).ready(function() {
-    
+
 	// TEST
 	var $entery = $(".entry");
 
@@ -221,7 +233,7 @@ setTimeout(function(){
 })
 
 // google map
-
+/*
 function initMap() {
         // Create a map object and specify the DOM element for display.
         var position = {lat: 60.00863023, lng: 30.24842441};
@@ -344,4 +356,4 @@ function initMap() {
     }
 ]
         map.setOptions({styles: styles});
-        }
+        }*/
