@@ -27,6 +27,9 @@ var BaseModule = function(){
         return document.location.href;
     };
     this.getPage = function(){
+        if(document.location.pathname == "/"){
+            return false;
+        };
         return document.location.pathname.match(/([a-zA-Z]+)/)[0];
     };
     this.scrollPos = function(){
