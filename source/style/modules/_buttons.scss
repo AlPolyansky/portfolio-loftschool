@@ -42,3 +42,21 @@
 	}
 }
 
+.slider{
+	.button{
+		width: 200px;
+		background-color: #6c9c5a;
+		margin: 0 auto;
+		text-align: center;
+		border-radius: 25px;
+		transition: background .1s;
+		&:hover{
+			background-color: darken(#6c9c5a,5%);
+		}
+	}
+	.button__item{
+		color: #fff;
+	}
+
+}
+

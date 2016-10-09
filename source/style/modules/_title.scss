@@ -191,6 +191,18 @@ $title_cover_about-say_font-size: rem(35px);
 			}
 		}
 
+		
+		#slider{
+			.title--slider{
+				font-size: 35px;
+				color: #566358;
+				&:after{
+					background-color: #566358;
+				}
+			}
+			
+		}
+
 
 
 

@@ -1,4 +1,4 @@
-// =========== Menu module ===========
+// =========== Common module ===========
 
 var commonModule = (function() {
 

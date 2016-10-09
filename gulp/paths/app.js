@@ -6,5 +6,6 @@ module.exports = [
  './source/js/modules/_menu.js',
  './source/js/modules/_sidebar.js',
  './source/js/modules/_form.js',
+ './source/js/modules/_slider.js',
  './source/js/app.js'
 ];

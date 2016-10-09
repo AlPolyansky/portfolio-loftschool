@@ -18,30 +18,7 @@ var startModule = (function(){
 
     // Функции модуля
 
-    var createPopUpWindow = function(text){
-        $("<div class='popUpWindow hide'><div class='popUpWindow__container'><span class='popUpWindow__close'></span><p class='popUpWindow__text'>"+ text +"</p></div></div>"
-            ).prependTo($("body"));
-
-        var $popUpWindow = $(".popUpWindow");
-        var position = $(window).scrollTop();
-        $popUpWindow.removeClass("hide");
-        $("body").toggleClass("no-scroll");
-        $popUpWindow.css({"top":position});
-
-
-
-       
-        $(".popUpWindow__close").on("click",function(){
-            $(this).closest($popUpWindow).addClass("hide");
-            $("body").toggleClass("no-scroll");
-            var $this = $(this);
-            setTimeout(function(){
-                $this.closest($($popUpWindow)).remove();
-            },400);
-            //$(this).closest($(".popUpWindow")).remove() 
-
-        });
-    }
+    
 
 
 
@@ -122,13 +99,6 @@ var startModule = (function(){
 
 
 
-    var getPage = function(){
-        if(location.href.match(/blog/)) {
-            //alert(12)
-        }
-
-    }
-
     // Прослушка
 
     var _setUpListner = function(){
@@ -172,6 +142,7 @@ $( document ).ready(function() {
     menuModule.init();
     sidebarModule.init();
     formModule.init();
+    sliderModule.init();
 })
 
 
