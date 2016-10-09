@@ -17,7 +17,8 @@ html
 
     link(rel='stylesheet' href='/assets/css/foundation.css')
     link(rel='stylesheet' href='/assets/css/app.css')
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAiPkFwvucMZkm0oeAnfLNc4XGTjqgFlZw&callback=initMap', async, defer)
+    - if(map == "About")
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAiPkFwvucMZkm0oeAnfLNc4XGTjqgFlZw&callback=initMap', async, defer)
     script(src='/assets/js/foundation.js' defer)
     script(src='/assets/js/app.js' defer)
 

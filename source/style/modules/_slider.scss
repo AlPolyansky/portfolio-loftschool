@@ -3,6 +3,8 @@
 $slider-height: 100vh;
 
 .slider{
+	-moz-user-select: none;
+	-webkit-user-select: none;
 	height: $slider-height;
 	width: 100%;
 	overflow: hidden;
@@ -43,6 +45,7 @@ $slider-height: 100vh;
 		float: right;
 		width: 50%;
 		height: 100%;
+
 	}
 
 
@@ -50,7 +53,7 @@ $slider-height: 100vh;
 	&__view{
 		height: calc(100% - 255px);
 		width: 100%;
-		background-color: pink;
+		background-color: #e1e4d7;
 		margin: 0;
 		overflow: hidden;
 		position: relative;
