@@ -15,7 +15,7 @@ var sliderModule = (function() {
 
 
         var $sliderControls = $sliderContent.find(".slider__controll");
-        var $sliderButtons = $sliderContent.find(".slider__button");
+        var $sliderButtons = $slider.find(".slider__button");
         var $sliderView = $sliderContent.find(".slider__view");
         var $sliderItems = $sliderView.find(".slider__item");
         var $sliderList = $sliderView.find(".slider__list");
