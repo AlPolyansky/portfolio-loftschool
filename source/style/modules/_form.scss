@@ -127,6 +127,7 @@ $form__textarea_height: 140px;
 			display: inline-block;
 			cursor: pointer;
 			opacity: 0;
+			position: relative;
 			z-index: 58;
 			&:checked{
 				& + .form__radio__text{
