@@ -353,7 +353,9 @@ body{
 
 
 // About
-
+#map{
+	background-color: $colorBackground;
+}
 .about-page{
 	.about__content{
 		.title--extra{
@@ -420,6 +422,10 @@ body{
 			background-color: $colorBase;
 		}
 	}
+}
+
+.preloader{
+	background-color: $colorMain;
 }
 
 // popUpWindow
