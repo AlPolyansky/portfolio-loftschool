@@ -9,7 +9,7 @@ $animateView : 800px;
 		-moz-box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
 		box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
 	height: 100vh;
-	min-height: 900px;
+	min-height:  900px;
 	@include apply-to($xs,max){
 		min-height: 650px;
 	}

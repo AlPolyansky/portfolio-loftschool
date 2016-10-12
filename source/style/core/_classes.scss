@@ -28,7 +28,11 @@
 	.cover__back{
 		z-index: 1000;
 		transform: rotateX(0deg) rotateY(0deg);
+		@include apply-to($l,max){
+			top: -5%;
+		}
 	}
+	
 }
 
 .cover__front {
@@ -175,7 +179,7 @@
 
 	&__container{
 		width: 100%;
-		max-width: 50vh;
+		max-width: 40vw;
 		margin: 0 20px;
 		background-color: #fff;
 		position: fixed;
@@ -184,10 +188,20 @@
 		top: 40%;
 		border-radius: 10px;
 		box-shadow: 10px 7px 5px -2px rgba(0,0,0,0.15);
+		@include apply-to($s,max){
+			max-width: 300px;
+			left: 0;
+			transform: none;
+			right: 0;
+			margin: auto;
+		}
 
 	}
 	&__text{
 		font-size: 40px;
+		@include apply-to($m,max){
+			font-size: 30px;
+		}
 	}
 	&__close{
 		height: 20px;

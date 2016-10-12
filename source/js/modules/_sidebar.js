@@ -12,7 +12,15 @@ var sidebarModule = (function() {
     var $blog = $(".blog-page");
     var $html = $("html");
     var $sandwich = $(".sandwich");
-    var $sidebarPostion = $sidebar.offset().top;
+    var startActive = 350;
+    var scrollSpeed = 700;
+    if(base.getPage() == "blog"){
+      var $sidebarPos = base.getPositionTotal($sidebar)[0].top;
+    }
+    
+
+    //console.log($sidebar.offset().top);
+    
 
 
     var open = "sidebar--open";
@@ -106,7 +114,7 @@ var sidebarModule = (function() {
 
     var _addSidebar= function(){
     	createItems();
-    	sibebarScrollTo(20,400);
+    	sibebarScrollTo(20,scrollSpeed);
 
     };
 
@@ -122,9 +130,8 @@ var sidebarModule = (function() {
         });
     };
 
-    var stickSidebar = function(){
-    	   
-				if($(document).scrollTop() >= $sidebarPostion){
+    var stickSidebar = function(elem){
+  			if($(document).scrollTop() >= $sidebarPos){
     			$sidebar.addClass(fixed);
 
     		}else{
@@ -145,7 +152,6 @@ var sidebarModule = (function() {
     }
 
     var _setUpListner = function () {
-    	if(base.getPage() == "blog"){
     		_addSidebar();
     		_openSidebar();
         _removeClassesOnResize();
@@ -153,13 +159,9 @@ var sidebarModule = (function() {
         	
     	
       $(window).on("scroll load",function(){
-        viewElement($(".article__item"),200);
-        stickSidebar();
+        viewElement($(".article__item"),startActive);
+        stickSidebar($sidebar);
       })
-      $(window).on("resize",function(){
-        //addActiveClass();
-      })
-      }
     };
 
 
