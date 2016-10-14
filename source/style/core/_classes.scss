@@ -1,3 +1,5 @@
+
+
 %link-reset{
 	&:active{
 			color: inherit;
@@ -108,8 +110,8 @@
 			margin-bottom: 60px;
 			position: relative;
 			padding-right: 0;
-			@include apply-to($s,max){
-				font-size: 49px;
+			@include apply-to($l,max){
+				font-size: 40px;
 			}
 			@include apply-to($xs,max){
 				font-size: 35px;

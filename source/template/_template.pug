@@ -19,6 +19,8 @@ html
     link(rel='stylesheet' href='/assets/css/app.css')
     - if(map == "About")
         script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAiPkFwvucMZkm0oeAnfLNc4XGTjqgFlZw&callback=initMap', async, defer)
+    - if(webGL == true)
+        script(src='/assets/js/water.js' defer)
     script(src='/assets/js/foundation.js' defer)
     script(src='/assets/js/app.js' defer)
 
@@ -27,5 +29,4 @@ html
     script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
     <![endif]-->
 
-  body
     block content

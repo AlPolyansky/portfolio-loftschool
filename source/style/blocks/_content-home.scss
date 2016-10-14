@@ -1,15 +1,39 @@
 $avatarSize: 141px;
 $animateView : 800px;
 
+
+.Background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+}
+
+.webGL{
+	overflow: hidden;
+}
+
+
+.Background::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
+}
+
+
 .home-page{
-	background-image: url("../img/header-bg.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: none;
 	-webkit-box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
 		-moz-box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
 		box-shadow: inset 0px 200px 300px -200px rgba(0,0,0,0.67);
 	height: 100vh;
-	min-height:  900px;
 	@include apply-to($xs,max){
 		min-height: 650px;
 	}

@@ -46,12 +46,12 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
 
-if(base.getPage() == "index" || !base.getPage()){
+/*if(base.getPage() == "index" || !base.getPage()){
     $(".home-page").css({
         "min-height" : $(window).height()
     })
 
-}
+}*/
 
 
 

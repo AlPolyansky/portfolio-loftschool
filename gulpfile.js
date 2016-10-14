@@ -7,7 +7,8 @@ global.$ = {
     task: require('./gulp/paths/tasks.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
+    app: require('./gulp/paths/app.js'),
+    webGl : require('./gulp/paths/webGL.js'),
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
@@ -27,6 +28,7 @@ $.gulp.task('default', $.gulp.series(
     'pug',
     'js:foundation',
     'js:process',
+    'js:web-gl',
     'copy:image',
     'css:foundation',
     'sprite:svg',
