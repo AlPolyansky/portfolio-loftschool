@@ -1,0 +1,86 @@
+// ================== 1800 width ================== //
+
+$up-click_gutter_bottom: 66px;
+$down-click_bottom: 62px;
+
+.down-click{
+	text-align: center;
+	font-size: 30px;
+	position: absolute;
+	width: 100%;
+	bottom: 62px;
+	z-index: 100;
+	@include trans(.3s);
+	&__ico{
+		@include trans(.3s);
+		opacity: .7;
+		cursor:pointer;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+.up-click{
+	@extend .down-click;
+	position: static;
+	@include trans(.3s);
+	margin-bottom: $up-click_gutter_bottom;
+	&__ico{
+		@extend .down-click__ico;
+	}
+}
+
+// ================== 1200 width ================== //
+
+
+$up-click_gutter_bottom: 63px;
+
+
+@include apply-to($m,max){
+
+	.up-click{
+		margin-bottom: $up-click_gutter_bottom;
+	}
+	
+}
+
+
+
+
+
+// ================== 768 width ================== //
+
+
+$up-click_gutter_bottom: 42px;
+$down-click_bottom: 42px;
+
+
+@include apply-to($s,max){
+
+	.down-click{
+		bottom: $down-click_bottom;
+	}
+	.up-click{
+		margin-bottom: $up-click_gutter_bottom;
+	}
+	
+}
+
+// ================== 480 width ================== //
+
+
+$up-click_gutter_bottom: 34px;
+$down-click_bottom: 45px;
+
+
+@include apply-to($xs,max){
+
+	.down-click{
+		bottom: $down-click_bottom;
+	}
+	.up-click{
+		margin-bottom: $up-click_gutter_bottom;
+	}
+	
+}

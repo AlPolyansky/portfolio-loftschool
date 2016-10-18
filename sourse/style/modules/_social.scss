@@ -1,0 +1,91 @@
+// ================== START 1800 width ================== //
+
+
+	// ========= START modifiers ========= //
+
+		.social{
+			padding: 0;
+			margin: 0;
+			font-size: 0;
+			&__item{
+				@extend %li-reset;
+				font-size: 28px;
+				padding-right: 16px;
+				&:last-child{
+					padding-right: 0;
+				}
+			}
+			&__link{
+				@include trans(.2s);
+				@extend %link-reset;
+			}
+		}
+
+	// ========= END modifiers ========= //
+
+
+	// ========= START Common ========= //
+
+	.header{
+		.social{
+			margin-left: 0px;
+			position: absolute;
+			left: -4px;
+			float: left;
+		}
+	}
+
+	.footer{
+		.social{
+				text-align: left;
+				&__link{
+					opacity: .5;
+					&:hover{
+						opacity: 1;
+					}
+				}
+			}	
+		}
+
+
+
+// ================== 768 width ================== //
+
+@include apply-to($s,max){
+
+	.header{
+		.social{
+			left: 10px;
+			top: 24px;
+			&__item{
+				font-size: 29px;
+				padding-right: 18px;
+			}
+		}
+	}
+}
+
+
+// ================== 480 width ================== //
+
+@include apply-to($xs,max){
+
+	.footer{
+		.social{
+			text-align: center;
+			margin-left: -3px;
+		}
+	}
+	.header{
+		.social{
+			left: 1px;
+			top: 8px;
+			&__item{
+				font-size: 23px;
+				padding-right: 20px;
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,36 @@
+.tabs{
+	background-color: #f0efe9;
+	margin-bottom: 50px;
+	&__list{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		font-size: 0;
+		display: flex;
+		
+	}
+	&__item{
+		flex-grow: 1;
+		text-align: center;
+		max-width: 180px;
+		font-size: 1rem;
+		list-style-type: none;
+		border-right: 2px solid #fff;
+		&:hover{
+			background-color: darken(#f0efe9,5%);
+		}
+	}
+	&__link{
+		text-transform: uppercase;
+		color: #455a64;
+		padding: 30px 35px;
+		text-decoration: none;
+		display: block;
+	}
+	.active{
+		background-color: #fff;
+		.tabs__link{
+			color: rgba(108, 156, 90, 0.85);
+		}
+	}
+}

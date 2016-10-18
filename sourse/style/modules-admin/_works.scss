@@ -1,0 +1,11 @@
+.works{
+	max-width: 300px;
+	&__input{
+		padding: 15px;
+		margin-bottom: 20px;
+		display: block;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+	}
+}

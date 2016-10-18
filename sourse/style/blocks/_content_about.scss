@@ -1,0 +1,235 @@
+// ================== 1800 width ================== //
+.s-about-me{
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		height: 100%;
+		z-index: -1;
+		width: 50%;
+	}
+	&__grid{
+		padding-top: 22px;
+		@include col(6);
+		&:first-child{
+			text-align: right;
+		}
+		&:last-child{
+			text-align: left;
+		}
+	}
+}
+
+.block__about{
+		display: inline-block;
+		max-width: 900px;
+		.title-back{
+			max-width: 480px;
+			float: left;
+		}
+		.about__content{
+			text-align: left;
+			width: 100%;
+			float: right;
+			padding: 0 20px;
+			.avatar-big{
+				display: inline-block;
+			}
+		}
+		.about__text{
+			line-height: 22px;
+		}
+	}
+
+	&__skill{
+		display: inline-block;
+}
+
+.block__skill{
+	padding-left: 38px;
+	max-width: 900px;
+	.skills__description{
+		line-height: 22px;
+		margin-bottom: 51px;
+	}
+
+	.skills__row{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		margin-bottom: 4px;
+	}
+	.skills__item{
+		list-style-type: none;
+		display: inline-block;
+		padding-right: 39px;
+		margin-bottom: 30px;
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+}
+
+
+// ================== width >= 1800px ================== //
+
+
+@include apply-to($l , min){
+	.block{
+		&__about{
+			.title-back{
+				.title--extra{
+				}
+			}
+			.about__content{
+				max-width: 480px;
+			}
+
+		}
+	}
+}
+
+
+
+// ================== width < 1800px ================== //
+
+@include apply-to($l - 1,max){
+
+	.s-about-me{
+		&__grid{
+			padding-top: 6px;
+			
+		}
+	}
+
+	.block__about{
+			max-width: 483px;
+			margin-right: 57px;
+			.title-back{
+				float: none;
+				max-width: 100%;
+			}
+		}
+	.about__text{
+		line-height: 22px;
+	}
+
+
+	.block__skill{
+		padding-left: 38px;
+		.skills__description{
+			line-height: 24px;
+			margin-bottom: 48px;
+		}
+
+		.skills__row{
+			margin-bottom: 4px;
+		}
+		.skills__item{
+			padding-right: 30px;
+		}
+	}
+
+}
+
+
+// ================== width < 1200 ================== //
+
+
+@include apply-to($m - 1,max){
+
+.s-about-me{
+	&:after{
+		width: 100%;
+	}
+	&__grid{
+		padding-top: 40px;
+		padding-bottom: 44px;
+		@include col(12);
+		&:first-child{
+			text-align: center;
+		}
+		&--last{
+			text-align: center;
+		}
+	}
+	.block__about{
+			max-width: 518px;
+			margin-right: 0;
+			padding-right: 6px;
+			.title-back{
+				max-width: 100%;
+			}
+		}
+	.about__text{
+		line-height: 22px;
+		margin: 0;
+		font-size: rem(14px);
+	}
+	.block__skill{
+		padding-left: 0;
+		text-align: center;
+		margin: 0 auto;
+		.skills__description{
+			line-height: 24px;
+			max-width: 472px;
+			text-align: left;
+			font-size: rem(14px);
+			margin: 0 auto;
+			margin-bottom: 40px;
+
+		}
+
+		.skills__row{
+			margin-bottom: 13px;
+		}
+		.skills__item{
+			padding: 0 17px;
+		}
+	}
+}
+
+}
+
+
+// ================== 480 width ================== //
+
+
+@include apply-to($xs,max){
+
+		.s-about-me{
+			&__grid{
+				padding-top: 22px;
+				padding-bottom: 24px;
+			}
+			.block__about{
+				max-width: 100%;
+				.about__content{
+					padding: 0;
+				}
+				.about__text{
+					padding: 0 10px;
+				}
+			}
+		
+
+		.block__skill{
+			.skills__description{
+				padding: 0 10px;
+				margin-bottom: 19px;
+			}
+
+			.skills__row{
+				margin-bottom: 0px;
+			}
+			.skills__item{
+				padding: 0 17px;
+			}
+		}
+}
+
+
+}
+
+
+

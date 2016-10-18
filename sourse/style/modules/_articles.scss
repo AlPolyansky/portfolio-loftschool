@@ -1,0 +1,111 @@
+// ================== 1800 width ================== //
+.article{
+	position: relative;
+	&__item{
+		padding-bottom: 65px;
+		margin-bottom: 77px;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			height: 5px;
+			position: absolute;
+			width: 100%;
+			max-width: 680px;
+			bottom: 0;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&__title{
+		font-size: 35px;
+		position: relative;
+		@include fonts($fontExtra,$f-r);
+		margin-left: 0;
+		padding: 0;
+		top: -7px;
+		margin: 0;
+		margin-bottom: 17px;
+	}
+	&__date{
+		font-size: 16px;
+	}
+	&__content{
+		line-height: 26px;
+		& > p{
+			max-width: 883px;
+		}
+	}
+	code{
+		width: 100%;
+	}
+}
+
+
+
+
+// ================== 1200 width ================== //
+@include apply-to($m,max){
+
+	.article{
+		&__date{
+			position: relative;
+			top: -4px;
+			left: 2px;
+		}
+	}
+
+
+}
+
+
+// ================== 768 width ================== //
+@include apply-to($s,max){
+
+	.article{
+		&__title{
+			font-size: rem(30px);
+			margin-bottom: 8px;
+			color: #566358;
+		}
+		&__date{
+			margin-bottom: 0;
+		}
+		&__content{
+			position: relative;
+			top: -5px;
+			line-height: 22px;
+			font-size: rem(14px);
+		}
+	}
+
+
+}
+
+// ================== 480 width ================== //
+@include apply-to($xs,max){
+
+	.article{
+		&__title{
+			font-size: rem(21px);
+		}
+		&__date{
+			margin-bottom: 0;
+			top: -2px;
+			left: 0px;
+		}
+		&__content{
+			position: relative;
+			top: -5px;
+			line-height: 22px;
+			font-size: rem(14px);
+		}
+	}
+
+
+}

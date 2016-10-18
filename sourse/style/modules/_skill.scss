@@ -1,0 +1,89 @@
+// ================== 1800 width ================== //
+
+$size: 118px;
+$innerSize: 78px;
+$activeColor: #81CE97;
+$percent: 0;
+$bgColor: lighten($activeColor, 24%);
+
+.skill {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+  &__wrap{
+    transform: rotate(-90deg);
+    border-radius: 50%;
+  }
+  &__circle{
+    stroke: $activeColor;
+    fill: $bgColor;
+    @include trans(.5s);
+    stroke-width: 32;
+    stroke-dasharray: $percent 100;
+  }
+}
+
+
+
+
+// INNER
+.skill__inner{
+  background: #fff;
+  text-align: center;
+  height: $innerSize;
+  width: $innerSize;
+  position: absolute;
+  border-radius: 50%;
+  @include center();
+  .skill__text {
+  	@include center();
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+
+// ================== width < 1800px ================== //
+
+
+@include apply-to($l - 1,max){
+
+
+  $size: 114px;
+
+  .skill{
+    width: $size;
+    height: $size;
+  }
+
+}
+
+
+// ================== width < 1200px ================== //
+
+
+@include apply-to($m - 1,max){
+
+
+  $size: 110px;
+  $innerSize: 69px;
+
+  .skill{
+    width: $size;
+    height: $size;
+  }
+
+  .skill__inner{
+  height: $innerSize;
+  width: $innerSize;
+    .skill__text {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+}
+

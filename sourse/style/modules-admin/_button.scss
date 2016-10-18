@@ -1,0 +1,15 @@
+.button{
+	display: block;
+	width: 100%;
+	margin-top: 45px;
+	&__item{
+		padding: 16px 20px;
+		display: block;
+		background-color: rgba(108, 156, 90, 0.85);
+		border-radius: 5px;
+		border: none;
+		outline: none;
+		color: #fff;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,82 @@
+// ================== START 1800 width ================== //
+
+
+	// ========= START modifiers ========= //
+		.sandwich{
+			height: 36px;
+			width: 41px;
+			cursor: pointer;
+			margin-top: 3px;
+			z-index: 3000;
+			position: absolute;
+			right: 30px;
+			top: 28px;
+			&__line{
+				@include trans(.3s);
+				width: 100%;
+				display: block;
+				height: 5px;
+				margin-bottom: 10px;
+				border-radius: 5px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			&__line__middle{
+				opacity: 1;
+			}
+		}
+
+		.sandwich_on{
+			.sandwich__line__top{
+				transform: rotate(45deg) translate(10px, 12px);
+				margin-bottom: 0;
+			}
+			.sandwich__line__middle{
+				opacity: 0;
+			}
+			.sandwich__line__bottom{
+				transform: rotate(-45deg) translate(2px, -4px);
+			}
+		}
+
+	// ========= END modifiers ========= //
+
+
+
+// ================== END 1800 width ================== //
+
+
+
+// ================== STAR 480 width ================== //
+
+
+$sandwich_size: 25px;
+$sandwich__line_gutter-bottom: 7px;
+
+
+@include apply-to($xs,max){
+
+	.sandwich{
+		width: $sandwich_size;
+		height: $sandwich_size;
+		top: 7px;
+		right: 12px;
+		&__line{
+			margin-bottom: $sandwich__line_gutter-bottom;
+			height: 3px;
+		}
+	}
+
+	.sandwich_on{
+		.sandwich__line__top{
+			transform: rotate(45deg) translate(5px, 7px);
+		}
+		.sandwich__line__bottom{
+			transform: rotate(-45deg) translate(2px, -5px);
+		}
+	}
+
+}
+
+// ================== END 480 width ================== //

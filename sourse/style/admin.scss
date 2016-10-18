@@ -1,0 +1,33 @@
+
+@import 'libs/orb/orb';
+
+@import "core/_fonts.scss";
+@import 'core/var';
+@import "modules-admin/_header";
+@import "modules-admin/_titles";
+@import "modules-admin/_tabs";
+@import "modules-admin/_skill";
+@import "modules-admin/_button";
+@import "modules-admin/_blog";
+@import "modules-admin/_works";
+
+*,*:after,*:before{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	@include fonts($fontMain,$f-r);
+	font-size: 16px;
+	background-color: #eee;
+}
+.wrapper{
+	overflow: hidden;
+}
+
+.container{
+	@include container(100%);
+	padding: 0 30px;
+}
+
